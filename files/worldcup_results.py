@@ -8,7 +8,7 @@ Fetches results from the MapRun API and applies World Cup scoring rules:
   - Quarter-final controls: 20 pts each (unlocked if >=3 from parent group)
   - Semi-final controls: 30 pts each (unlocked if both QFs in the half scored)
   - Final control: 50 pts (unlocked if both SFs scored)
-  - Time penalty: -10 pts per minute (or part thereof) over 60 minutes
+  - Time penalty: -1 pt per 2 seconds (or part thereof) over 60 minutes
 
 Usage:
     python3 worldcup_results.py --event "Nower Jun26 MVOC PXAS ScoreQ60"
@@ -28,7 +28,7 @@ from datetime import datetime, timezone
 # ---------------------------------------------------------------------------
 
 TIME_LIMIT_SECS = 60 * 60          # 60 minutes
-PENALTY_PER_MIN = 10                # points deducted per minute (or part) over
+PENALTY_PER_2SECS = 1               # points deducted per 2 seconds (or part) over
 
 # Group stage: control number -> (group, country)
 GROUP_CONTROLS = {
@@ -179,9 +179,8 @@ def apply_penalty(raw_score, total_time_secs):
     overtime = max(0, total_time_secs - TIME_LIMIT_SECS)
     if overtime == 0:
         return raw_score, 0, 0
-    # Ceiling: any part of a minute counts
-    overtime_mins = math.ceil(overtime / 60)
-    penalty = overtime_mins * PENALTY_PER_MIN
+    # Ceiling: any part of a 2-second block counts
+    penalty = math.ceil(overtime / 2) * PENALTY_PER_2SECS
     net = max(0, raw_score - penalty)
     return net, penalty, overtime
 
