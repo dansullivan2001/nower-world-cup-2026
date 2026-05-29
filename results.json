@@ -70,43 +70,164 @@
         "99 Final +50"
       ],
       "punch_log": [
-        [11, "scored"],
-        [12, "scored"],
-        [13, "scored"],
-        [14, "scored"],
-        [15, "scored"],
-        [16, "scored"],
-        [21, "scored"],
-        [22, "scored"],
-        [23, "scored"],
-        [24, "scored"],
-        [25, "scored"],
-        [26, "scored"],
-        [31, "scored"],
-        [32, "scored"],
-        [33, "scored"],
-        [34, "scored"],
-        [35, "scored"],
-        [36, "scored"],
-        [41, "scored"],
-        [42, "scored"],
-        [43, "scored"],
-        [44, "scored"],
-        [45, "scored"],
-        [46, "scored"],
-        [19, "scored"],
-        [29, "scored"],
-        [39, "scored"],
-        [49, "scored"],
-        [59, "scored"],
-        [69, "scored"],
-        [99, "scored"]
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          15,
+          "scored"
+        ],
+        [
+          16,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          24,
+          "scored"
+        ],
+        [
+          25,
+          "scored"
+        ],
+        [
+          26,
+          "scored"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          34,
+          "scored"
+        ],
+        [
+          35,
+          "scored"
+        ],
+        [
+          36,
+          "scored"
+        ],
+        [
+          41,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          44,
+          "scored"
+        ],
+        [
+          45,
+          "scored"
+        ],
+        [
+          46,
+          "scored"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          29,
+          "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          49,
+          "scored"
+        ],
+        [
+          59,
+          "scored"
+        ],
+        [
+          69,
+          "scored"
+        ],
+        [
+          99,
+          "scored"
+        ]
       ],
       "group_hits": {
-        "A": [11, 12, 13, 14, 15, 16],
-        "B": [21, 22, 23, 24, 25, 26],
-        "C": [31, 32, 33, 34, 35, 36],
-        "D": [41, 42, 43, 44, 45, 46]
+        "A": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "B": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "C": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36
+        ],
+        "D": [
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ]
       },
       "furthest_round": "Final"
     },
@@ -166,36 +287,126 @@
         "99 Final +50"
       ],
       "punch_log": [
-        [11, "scored"],
-        [12, "scored"],
-        [19, "locked"],
-        [13, "scored"],
-        [14, "scored"],
-        [21, "scored"],
-        [22, "scored"],
-        [23, "scored"],
-        [24, "scored"],
-        [31, "scored"],
-        [32, "scored"],
-        [33, "scored"],
-        [41, "scored"],
-        [42, "scored"],
-        [43, "scored"],
-        [19, "scored"],
-        [29, "scored"],
-        [39, "scored"],
-        [49, "scored"],
-        [59, "scored"],
-        [69, "scored"],
-        [99, "scored"],
-        [14, "duplicate"],
-        [29, "duplicate"]
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          19,
+          "locked"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          24,
+          "scored"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          41,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          29,
+          "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          49,
+          "scored"
+        ],
+        [
+          59,
+          "scored"
+        ],
+        [
+          69,
+          "scored"
+        ],
+        [
+          99,
+          "scored"
+        ],
+        [
+          14,
+          "duplicate"
+        ],
+        [
+          29,
+          "duplicate"
+        ]
       ],
       "group_hits": {
-        "A": [11, 12, 13, 14],
-        "B": [21, 22, 23, 24],
-        "C": [31, 32, 33],
-        "D": [41, 42, 43]
+        "A": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "B": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "C": [
+          31,
+          32,
+          33
+        ],
+        "D": [
+          41,
+          42,
+          43
+        ]
       },
       "furthest_round": "Final"
     },
@@ -255,205 +466,134 @@
         "99 Final LOCKED (0)"
       ],
       "punch_log": [
-        [11, "scored"],
-        [12, "scored"],
-        [13, "scored"],
-        [14, "scored"],
-        [15, "scored"],
-        [16, "scored"],
-        [21, "scored"],
-        [22, "scored"],
-        [23, "scored"],
-        [24, "scored"],
-        [25, "scored"],
-        [26, "scored"],
-        [31, "scored"],
-        [32, "scored"],
-        [33, "scored"],
-        [41, "scored"],
-        [42, "scored"],
-        [19, "scored"],
-        [29, "scored"],
-        [39, "scored"],
-        [49, "locked"],
-        [59, "scored"],
-        [69, "locked"],
-        [99, "locked"]
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          15,
+          "scored"
+        ],
+        [
+          16,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          24,
+          "scored"
+        ],
+        [
+          25,
+          "scored"
+        ],
+        [
+          26,
+          "scored"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          41,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          29,
+          "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          49,
+          "locked"
+        ],
+        [
+          59,
+          "scored"
+        ],
+        [
+          69,
+          "locked"
+        ],
+        [
+          99,
+          "locked"
+        ]
       ],
       "group_hits": {
-        "A": [11, 12, 13, 14, 15, 16],
-        "B": [21, 22, 23, 24, 25, 26],
-        "C": [31, 32, 33],
-        "D": [41, 42]
+        "A": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "B": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "C": [
+          31,
+          32,
+          33
+        ],
+        "D": [
+          41,
+          42
+        ]
       },
       "furthest_round": "SF"
     },
     {
       "pos": 4,
-      "name": "George Hasty",
-      "club": "MVOC",
-      "classifier": "OK",
-      "start_local": "18:42:00",
-      "finish_local": "19:47:00",
-      "total_time": "1:05:00",
-      "total_secs": 3900,
-      "group_pts": 120,
-      "knockout_pts": 140,
-      "raw_score": 260,
-      "penalty": 50,
-      "overtime_secs": 300,
-      "net_score": 210,
-      "qualified": {
-        "A": true,
-        "B": true,
-        "C": true,
-        "D": true
-      },
-      "scored_knockouts": [
-        19,
-        29,
-        39,
-        49,
-        59,
-        69
-      ],
-      "group_detail": [
-        "11 Brazil",
-        "12 Argentina",
-        "13 Mexico",
-        "21 England",
-        "22 France",
-        "23 Spain",
-        "31 Morocco",
-        "32 Senegal",
-        "41 Switzerland",
-        "42 Norway",
-        "43 Turkey",
-        "33 Belgium"
-      ],
-      "knockout_detail": [
-        "19 QF-A +20",
-        "29 QF-B +20",
-        "39 QF-C +20",
-        "49 QF-D +20",
-        "59 SF1 +30",
-        "69 SF2 +30"
-      ],
-      "punch_log": [
-        [19, "locked"],
-        [39, "locked"],
-        [11, "scored"],
-        [12, "scored"],
-        [13, "scored"],
-        [21, "scored"],
-        [22, "scored"],
-        [23, "scored"],
-        [31, "scored"],
-        [32, "scored"],
-        [41, "scored"],
-        [42, "scored"],
-        [43, "scored"],
-        [19, "scored"],
-        [29, "scored"],
-        [39, "locked"],
-        [49, "scored"],
-        [59, "scored"],
-        [33, "scored"],
-        [39, "scored"],
-        [69, "scored"],
-        [59, "duplicate"]
-      ],
-      "group_hits": {
-        "A": [11, 12, 13],
-        "B": [21, 22, 23],
-        "C": [31, 32, 33],
-        "D": [41, 42, 43]
-      },
-      "furthest_round": "SF"
-    },
-    {
-      "pos": 5,
-      "name": "Diana Steady",
-      "club": "MVOC",
-      "classifier": "OK",
-      "start_local": "18:45:00",
-      "finish_local": "19:48:30",
-      "total_time": "1:03:30",
-      "total_secs": 3810,
-      "group_pts": 160,
-      "knockout_pts": 80,
-      "raw_score": 240,
-      "penalty": 40,
-      "overtime_secs": 210,
-      "net_score": 200,
-      "qualified": {
-        "A": true,
-        "B": true,
-        "C": true,
-        "D": true
-      },
-      "scored_knockouts": [
-        19,
-        29,
-        39,
-        49
-      ],
-      "group_detail": [
-        "11 Brazil",
-        "12 Argentina",
-        "13 Mexico",
-        "14 Uruguay",
-        "21 England",
-        "22 France",
-        "23 Spain",
-        "24 Portugal",
-        "31 Morocco",
-        "32 Senegal",
-        "33 Belgium",
-        "34 Japan",
-        "41 Switzerland",
-        "42 Norway",
-        "43 Turkey",
-        "44 Austria"
-      ],
-      "knockout_detail": [
-        "19 QF-A +20",
-        "29 QF-B +20",
-        "39 QF-C +20",
-        "49 QF-D +20"
-      ],
-      "punch_log": [
-        [11, "scored"],
-        [12, "scored"],
-        [13, "scored"],
-        [14, "scored"],
-        [21, "scored"],
-        [22, "scored"],
-        [23, "scored"],
-        [24, "scored"],
-        [31, "scored"],
-        [32, "scored"],
-        [33, "scored"],
-        [34, "scored"],
-        [41, "scored"],
-        [42, "scored"],
-        [43, "scored"],
-        [44, "scored"],
-        [19, "scored"],
-        [29, "scored"],
-        [39, "scored"],
-        [49, "scored"]
-      ],
-      "group_hits": {
-        "A": [11, 12, 13, 14],
-        "B": [21, 22, 23, 24],
-        "C": [31, 32, 33, 34],
-        "D": [41, 42, 43, 44]
-      },
-      "furthest_round": "QF"
-    },
-    {
-      "pos": 6,
       "name": "Charlie Greedy",
       "club": "MVOC",
       "classifier": "OK",
@@ -499,34 +639,260 @@
         "99 Final LOCKED (0)"
       ],
       "punch_log": [
-        [11, "scored"],
-        [12, "scored"],
-        [21, "scored"],
-        [22, "scored"],
-        [23, "scored"],
-        [31, "scored"],
-        [32, "scored"],
-        [41, "scored"],
-        [42, "scored"],
-        [43, "scored"],
-        [19, "locked"],
-        [29, "scored"],
-        [39, "locked"],
-        [49, "scored"],
-        [59, "locked"],
-        [69, "locked"],
-        [99, "locked"]
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          41,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          19,
+          "locked"
+        ],
+        [
+          29,
+          "scored"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          49,
+          "scored"
+        ],
+        [
+          59,
+          "locked"
+        ],
+        [
+          69,
+          "locked"
+        ],
+        [
+          99,
+          "locked"
+        ]
       ],
       "group_hits": {
-        "A": [11, 12],
-        "B": [21, 22, 23],
-        "C": [31, 32],
-        "D": [41, 42, 43]
+        "A": [
+          11,
+          12
+        ],
+        "B": [
+          21,
+          22,
+          23
+        ],
+        "C": [
+          31,
+          32
+        ],
+        "D": [
+          41,
+          42,
+          43
+        ]
       },
       "furthest_round": "QF"
     },
     {
-      "pos": 7,
+      "pos": 5,
+      "name": "Diana Steady",
+      "club": "MVOC",
+      "classifier": "OK",
+      "start_local": "18:45:00",
+      "finish_local": "19:48:30",
+      "total_time": "1:03:30",
+      "total_secs": 3810,
+      "group_pts": 160,
+      "knockout_pts": 80,
+      "raw_score": 240,
+      "penalty": 105,
+      "overtime_secs": 210,
+      "net_score": 135,
+      "qualified": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "scored_knockouts": [
+        19,
+        29,
+        39,
+        49
+      ],
+      "group_detail": [
+        "11 Brazil",
+        "12 Argentina",
+        "13 Mexico",
+        "14 Uruguay",
+        "21 England",
+        "22 France",
+        "23 Spain",
+        "24 Portugal",
+        "31 Morocco",
+        "32 Senegal",
+        "33 Belgium",
+        "34 Japan",
+        "41 Switzerland",
+        "42 Norway",
+        "43 Turkey",
+        "44 Austria"
+      ],
+      "knockout_detail": [
+        "19 QF-A +20",
+        "29 QF-B +20",
+        "39 QF-C +20",
+        "49 QF-D +20"
+      ],
+      "punch_log": [
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          24,
+          "scored"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          34,
+          "scored"
+        ],
+        [
+          41,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          44,
+          "scored"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          29,
+          "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          49,
+          "scored"
+        ]
+      ],
+      "group_hits": {
+        "A": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "B": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "C": [
+          31,
+          32,
+          33,
+          34
+        ],
+        "D": [
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      "furthest_round": "QF"
+    },
+    {
+      "pos": 6,
       "name": "Ed Newbie",
       "club": "MVOC",
       "classifier": "OK",
@@ -563,26 +929,243 @@
       ],
       "knockout_detail": [],
       "punch_log": [
-        [11, "scored"],
-        [12, "scored"],
-        [13, "scored"],
-        [21, "scored"],
-        [22, "scored"],
-        [23, "scored"],
-        [31, "scored"],
-        [32, "scored"],
-        [33, "scored"],
-        [41, "scored"],
-        [42, "scored"],
-        [43, "scored"]
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          41,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ]
       ],
       "group_hits": {
-        "A": [11, 12, 13],
-        "B": [21, 22, 23],
-        "C": [31, 32, 33],
-        "D": [41, 42, 43]
+        "A": [
+          11,
+          12,
+          13
+        ],
+        "B": [
+          21,
+          22,
+          23
+        ],
+        "C": [
+          31,
+          32,
+          33
+        ],
+        "D": [
+          41,
+          42,
+          43
+        ]
       },
       "furthest_round": "Group"
+    },
+    {
+      "pos": 7,
+      "name": "George Hasty",
+      "club": "MVOC",
+      "classifier": "OK",
+      "start_local": "18:42:00",
+      "finish_local": "19:47:00",
+      "total_time": "1:05:00",
+      "total_secs": 3900,
+      "group_pts": 120,
+      "knockout_pts": 140,
+      "raw_score": 260,
+      "penalty": 150,
+      "overtime_secs": 300,
+      "net_score": 110,
+      "qualified": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "scored_knockouts": [
+        19,
+        29,
+        39,
+        49,
+        59,
+        69
+      ],
+      "group_detail": [
+        "11 Brazil",
+        "12 Argentina",
+        "13 Mexico",
+        "21 England",
+        "22 France",
+        "23 Spain",
+        "31 Morocco",
+        "32 Senegal",
+        "41 Switzerland",
+        "42 Norway",
+        "43 Turkey",
+        "33 Belgium"
+      ],
+      "knockout_detail": [
+        "19 QF-A +20",
+        "29 QF-B +20",
+        "39 QF-C +20",
+        "49 QF-D +20",
+        "59 SF1 +30",
+        "69 SF2 +30"
+      ],
+      "punch_log": [
+        [
+          19,
+          "locked"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          41,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          29,
+          "scored"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          49,
+          "scored"
+        ],
+        [
+          59,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          69,
+          "scored"
+        ],
+        [
+          59,
+          "duplicate"
+        ]
+      ],
+      "group_hits": {
+        "A": [
+          11,
+          12,
+          13
+        ],
+        "B": [
+          21,
+          22,
+          23
+        ],
+        "C": [
+          31,
+          32,
+          33
+        ],
+        "D": [
+          41,
+          42,
+          43
+        ]
+      },
+      "furthest_round": "SF"
     },
     {
       "pos": 8,
@@ -617,23 +1200,69 @@
       ],
       "knockout_detail": [],
       "punch_log": [
-        [11, "scored"],
-        [21, "scored"],
-        [11, "duplicate"],
-        [22, "scored"],
-        [11, "duplicate"],
-        [12, "scored"],
-        [31, "scored"],
-        [13, "scored"],
-        [32, "scored"],
-        [12, "duplicate"],
-        [21, "duplicate"],
-        [13, "duplicate"]
+        [
+          11,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          11,
+          "duplicate"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          11,
+          "duplicate"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          12,
+          "duplicate"
+        ],
+        [
+          21,
+          "duplicate"
+        ],
+        [
+          13,
+          "duplicate"
+        ]
       ],
       "group_hits": {
-        "A": [11, 12, 13],
-        "B": [21, 22],
-        "C": [31, 32],
+        "A": [
+          11,
+          12,
+          13
+        ],
+        "B": [
+          21,
+          22
+        ],
+        "C": [
+          31,
+          32
+        ],
         "D": []
       },
       "furthest_round": "Group"
