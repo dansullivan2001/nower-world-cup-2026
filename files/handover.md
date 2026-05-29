@@ -26,7 +26,7 @@ The tens digit of group controls identifies the group (11–16 = Group A, 21–2
 
 **Maximum possible score:** 240 (groups) + 80 (QFs) + 60 (SFs) + 50 (Final) = **430 pts**
 
-**Time penalty:** -10 pts per minute (or part thereof) over 60 minutes.
+**Time penalty:** 1 pt per 2 seconds (30 pts/min) over 60 minutes.
 
 ---
 

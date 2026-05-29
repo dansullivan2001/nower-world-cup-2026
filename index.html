@@ -64,6 +64,41 @@
       flex-wrap: wrap;
     }
 
+    .name-filter-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .name-filter-input {
+      background: rgba(0,0,0,0.35);
+      border: 1px solid var(--gold-dim);
+      border-radius: 20px;
+      color: var(--white);
+      font-size: 0.82em;
+      padding: 5px 30px 5px 14px;
+      width: 190px;
+      outline: none;
+      transition: border-color 0.2s, width 0.2s;
+    }
+    .name-filter-input::placeholder { color: #667; }
+    .name-filter-input:focus { border-color: var(--gold); width: 230px; }
+
+    .name-filter-clear {
+      position: absolute;
+      right: 9px;
+      background: none;
+      border: none;
+      color: #667;
+      cursor: pointer;
+      font-size: 1em;
+      line-height: 1;
+      padding: 0;
+      display: none;
+    }
+    .name-filter-clear.visible { display: block; color: var(--silver); }
+    .name-filter-clear:hover { color: var(--white); }
+
     .live-indicator {
       display: flex;
       align-items: center;
@@ -394,6 +429,11 @@
   <div class="header-title">🏆 World Cup Score Event</div>
   <div class="header-sub">The Nower &middot; 22 June 2026 &middot; Mole Valley Orienteering Club</div>
   <div class="toolbar">
+    <div class="name-filter-wrap">
+      <input class="name-filter-input" id="nameFilter" type="search" placeholder="Filter by name…"
+             oninput="applyNameFilter(this.value)" autocomplete="off" spellcheck="false">
+      <button class="name-filter-clear" id="nameFilterClear" onclick="clearNameFilter()" title="Clear">&times;</button>
+    </div>
     <div class="live-indicator">
       <span class="live-dot" id="liveDot"></span>
       <span id="lastUpdated">Loading&hellip;</span>
@@ -444,6 +484,7 @@ var autoTimer     = null;
 var showSrcBadges = false;
 
 var AUTO_REFRESH_MS = 5 * 60 * 1000;
+var nameFilterVal  = '';
 
 // ── Data constants ───────────────────────────────────────────────────────────
 var FLAGS = {
@@ -626,10 +667,37 @@ function updateDisplay() {
   renderTable(mergedResults);
 }
 
+function applyNameFilter(val) {
+  nameFilterVal = val.trim();
+  var clearBtn = document.getElementById('nameFilterClear');
+  if (clearBtn) {
+    if (nameFilterVal) clearBtn.classList.add('visible');
+    else               clearBtn.classList.remove('visible');
+  }
+  if (mergedResults) renderTable(mergedResults);
+}
+
+function clearNameFilter() {
+  nameFilterVal = '';
+  var input = document.getElementById('nameFilter');
+  if (input) input.value = '';
+  var clearBtn = document.getElementById('nameFilterClear');
+  if (clearBtn) clearBtn.classList.remove('visible');
+  if (mergedResults) renderTable(mergedResults);
+}
+
 function renderTable(rows) {
+  var needle = nameFilterVal.toLowerCase();
+  var filtered = needle
+    ? rows.filter(function(r) { return r.name.toLowerCase().indexOf(needle) !== -1; })
+    : rows;
+
   var main = document.getElementById('mainContent');
+  var countStr = needle
+    ? (filtered.length + ' of ' + rows.length + ' runner' + (rows.length !== 1 ? 's' : ''))
+    : (rows.length + ' runner' + (rows.length !== 1 ? 's' : ''));
   var html = '<div class="meta-row">' +
-    '<span class="runner-count">' + rows.length + ' runner' + (rows.length !== 1 ? 's' : '') + '</span>' +
+    '<span class="runner-count">' + countStr + '</span>' +
     '<span class="hint">Click a row to expand</span>' +
     '</div>';
 
@@ -645,7 +713,7 @@ function renderTable(rows) {
     '<th>Journey</th>' +
     '</tr></thead><tbody>';
 
-  rows.forEach(function(r, i) {
+  filtered.forEach(function(r, i) {
     var exp = expandedRows.has(i);
 
     var otStr = r.overtime_secs > 0

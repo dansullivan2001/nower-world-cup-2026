@@ -73,11 +73,11 @@ Each quarter-final is linked to its parent group:
 You have **60 minutes** from your start time.
 
 - Finishing within 60 minutes: no penalty
-- Finishing late: **−10 points per minute (or part thereof)** over the limit
+- Finishing late: **1 point per 2 seconds** over the limit (equivalent to 30 points per minute)
 
-A runner finishing at 61:30 incurs a **−20 point** penalty (90 seconds late = 2 started minutes × 10).
+A runner finishing at 61:30 incurs a **−45 point** penalty (90 seconds late × 0.5 pts/sec).
 
-Plan your route to get back on time — a late finish can wipe out an entire quarter-final.
+Plan your route to get back on time — a late finish can wipe out more than an entire quarter-final.
 
 ---
 
@@ -109,7 +109,7 @@ Plan your route to get back on time — a late finish can wipe out an entire qua
 | Quarter-finals | 20 pts each (need both QFs in a half to unlock SF) |
 | Semi-finals | 30 pts each (need both SFs to unlock Final) |
 | Final | 50 pts |
-| Time penalty | −10 pts per minute (or part) over 60 mins |
+| Time penalty | 1 pt per 2 seconds (30 pts/min) over 60 mins |
 | Max score | 430 pts |
 
 ---

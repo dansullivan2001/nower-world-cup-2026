@@ -29,7 +29,7 @@ A 60-minute score orienteering event on The Nower (Dorking, Surrey) with a World
 - SF2 (69) unlocks with both QF-C (39) and QF-D (49) scored
 - Final (99) unlocks with both SF1 and SF2 scored
 
-**Time penalty:** −10 pts per minute (or part thereof) over 60 minutes
+**Time penalty:** 1 pt per 2 seconds (30 pts/min) over 60 minutes
 
 GPS punching via the [MapRun](https://maprunners.weebly.com/) app — no physical punch needed.
 
