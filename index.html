@@ -264,10 +264,19 @@
     .detail-formula {
       margin-top: 9px;
       font-family: monospace;
-      font-size: 0.9em;
+      font-size: 1.15em;
       color: var(--silver);
       border-top: 1px solid rgba(255,255,255,0.07);
       padding-top: 8px;
+    }
+
+    .detail-controls {
+      margin-top: 8px;
+      font-family: monospace;
+      font-size: 0.82em;
+      color: #667;
+      word-break: break-all;
+      line-height: 1.7;
     }
 
     /* ── Action bar ── */
@@ -403,7 +412,7 @@
 <div class="action-bar" id="actionBar" style="display:none">
   <button class="action-btn" onclick="exportCSV()">&#128229; Export CSV</button>
   <button class="action-btn" onclick="window.print()">&#128438; Print</button>
-  <div class="import-section" id="importSection" style="display:none">
+  <div class="import-section" id="importSection">
     <input type="file" id="csvFileInput" accept=".csv" onchange="handleCSVImport(event)">
     <label for="csvFileInput" class="import-label">&#128228; Import CSV</label>
     <span class="import-status" id="importStatus"></span>
@@ -613,7 +622,6 @@ function updateDisplay() {
     return;
   }
 
-  bar.style.display = 'flex';
   key.style.display = 'flex';
   renderTable(mergedResults);
 }
@@ -726,8 +734,15 @@ function buildDetail(r) {
     r.group_pts + ' (group) + ' + r.knockout_pts + ' (KO) &minus; ' +
     r.penalty + ' (penalty) = <strong style="color:var(--gold)">' + r.net_score + '</strong>';
 
+  var controlsHTML = '';
+  var gd2 = r.group_detail || [];
+  if (gd2.length > 0) {
+    var nums = gd2.map(function(d) { return d.split(' ')[0]; });
+    controlsHTML = '<div class="detail-controls">Controls visited: ' + nums.join(' &middot; ') + '</div>';
+  }
+
   return '<div class="detail-inner">' + groupsHTML + koHTML +
-         '<div class="detail-formula">' + formula + '</div></div>';
+         '<div class="detail-formula">' + formula + '</div>' + controlsHTML + '</div>';
 }
 
 function toggleRow(i) {
@@ -899,9 +914,9 @@ function clearImport() {
 // ── Admin toggle ─────────────────────────────────────────────────────────────
 
 function toggleImport() {
-  var sec     = document.getElementById('importSection');
-  var visible = sec.style.display !== 'none';
-  sec.style.display = visible ? 'none' : 'flex';
+  var bar     = document.getElementById('actionBar');
+  var visible = bar.style.display !== 'none';
+  bar.style.display = visible ? 'none' : 'flex';
   showSrcBadges = !visible;
   if (mergedResults) renderTable(mergedResults);
 }
@@ -909,7 +924,7 @@ function toggleImport() {
 // ── Init ─────────────────────────────────────────────────────────────────────
 
 if (window.location.search.indexOf('import') !== -1) {
-  document.getElementById('importSection').style.display = 'flex';
+  document.getElementById('actionBar').style.display = 'flex';
   showSrcBadges = true;
 }
 

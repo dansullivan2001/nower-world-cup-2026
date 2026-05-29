@@ -92,7 +92,7 @@ def score_runner(punch_ids_str):
     Given a list of control ID strings (from MapRun API),
     return a detailed scoring breakdown dict.
     """
-    punched = set(int(c) for c in punch_ids_str)
+    punched = set(int(c.split()[0]) for c in punch_ids_str)
 
     # --- Group stage ---
     group_hits = {"A": [], "B": [], "C": [], "D": []}
