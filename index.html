@@ -740,8 +740,8 @@ function buildDetail(r) {
     var parts = pl.map(function(entry) {
       var ctrl = entry[0], status = entry[1];
       if (status === 'scored')    return '<span style="color:#4caf50;font-weight:700">' + ctrl + '</span>';
-      if (status === 'locked')    return '<span style="color:var(--red);text-decoration:line-through">' + ctrl + '</span>';
-      /* duplicate */             return '<span style="color:#555;text-decoration:line-through">' + ctrl + '</span>';
+      if (status === 'locked')    return '<span style="color:var(--red)">' + ctrl + '</span>';
+      /* duplicate */             return '<span style="color:#555">' + ctrl + '</span>';
     });
     controlsHTML = '<div class="detail-controls">Controls visited: ' + parts.join(' &middot; ') + '</div>';
   }
