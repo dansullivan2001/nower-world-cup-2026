@@ -52,7 +52,7 @@ GPS punching via the [MapRun](https://maprunners.weebly.com/) app — no physica
 
 `index.html` is a static page that reads `results.json`. It shows a ranked table with expandable per-runner breakdowns (group qualification, knockouts scored/locked, score formula). Supports CSV export and print.
 
-On event day (22 June 2026) the GitHub Action runs every 5 minutes from 17:00–23:59 BST to keep `results.json` current.
+On event day (22 June 2026) the GitHub Action runs every 5 minutes from 17:00–23:55 BST to keep `results.json` current.
 
 ---
 

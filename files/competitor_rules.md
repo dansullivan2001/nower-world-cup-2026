@@ -73,11 +73,11 @@ Each quarter-final is linked to its parent group:
 You have **60 minutes** from your start time.
 
 - Finishing within 60 minutes: no penalty
-- Finishing late: **−1 point per 2 seconds (or part thereof)** over the limit
+- Finishing late: **−10 points per minute (or part thereof)** over the limit
 
-A runner finishing at 61:30 incurs a **−45 point** penalty (90 seconds late = 45 two-second intervals).
+A runner finishing at 61:30 incurs a **−20 point** penalty (90 seconds late = 2 started minutes × 10).
 
-Plan your route to get back on time — a late finish can wipe out an entire semi-final.
+Plan your route to get back on time — a late finish can wipe out an entire quarter-final.
 
 ---
 
@@ -86,7 +86,7 @@ Plan your route to get back on time — a late finish can wipe out an entire sem
 - The group stage is where most points are made. You don't need to collect all six from a group — just three to qualify — but all six add up.
 - A balanced route through all four groups is likely to outscore a deep dive into just one or two.
 - The Final (99) is worth 50 points, but requires punching and qualifying through eight earlier controls. It rewards the runner who covers the most ground efficiently.
-- Going late is almost never worth it. At 1 point per 2 seconds, just 40 seconds over costs you a quarter-final.
+- Going late is almost never worth it. At 10 points per started minute, just over a minute late costs you a quarter-final.
 
 ---
 
@@ -109,7 +109,7 @@ Plan your route to get back on time — a late finish can wipe out an entire sem
 | Quarter-finals | 20 pts each (need both QFs in a half to unlock SF) |
 | Semi-finals | 30 pts each (need both SFs to unlock Final) |
 | Final | 50 pts |
-| Time penalty | −1 pt per 2 seconds (or part) over 60 mins |
+| Time penalty | −10 pts per minute (or part) over 60 mins |
 | Max score | 430 pts |
 
 ---
