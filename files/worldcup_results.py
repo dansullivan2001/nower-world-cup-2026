@@ -89,66 +89,76 @@ QUALIFY_THRESHOLD = 3   # controls needed from a group to unlock that group's QF
 
 def score_runner(punch_ids_str):
     """
-    Given a list of control ID strings (from MapRun API),
+    Given an ordered list of control ID strings (from MapRun API),
     return a detailed scoring breakdown dict.
-    """
-    punched = set(int(c.split()[0]) for c in punch_ids_str)
 
-    # --- Group stage ---
+    Controls are processed in punch order. Duplicate punches are resolved by
+    first-occurrence-wins (subsequent punches of the same control are ignored).
+    A knockout control only scores if its prerequisites were already satisfied
+    at the moment it was punched.
+    """
+    # Group controls: deduplicate by first occurrence — protects against accidental
+    # re-punches when a control lies on the route back.
+    # Knockout controls: re-punchable. Each punch gets a fresh eligibility check;
+    # once scored it is skipped on any later re-punch. This lets a runner who
+    # visits a QF before qualifying return to it after earning qualification.
+    seen_group = set()
+
     group_hits = {"A": [], "B": [], "C": [], "D": []}
-    group_pts = 0
+    qualified  = {"A": False, "B": False, "C": False, "D": False}
+    group_pts  = 0
     group_detail = []
 
-    for ctrl, (grp, country) in GROUP_CONTROLS.items():
-        if ctrl in punched:
-            group_hits[grp].append(ctrl)
-            group_pts += POINTS["group"]
-            group_detail.append(f"{ctrl} {country}")
-
-    # --- Qualification ---
-    qualified = {grp: len(hits) >= QUALIFY_THRESHOLD
-                 for grp, hits in group_hits.items()}
-
-    # --- Knockout stage ---
-    # Track which knockout controls actually scored (not just punched)
     scored_knockouts = set()
-    knockout_pts = 0
+    ko_punched       = set()   # all knockout controls punched at least once
+    knockout_pts     = 0
+
+    for c in punch_ids_str:
+        ctrl = int(c.split()[0])
+
+        if ctrl in GROUP_CONTROLS:
+            if ctrl not in seen_group:
+                seen_group.add(ctrl)
+                grp, country = GROUP_CONTROLS[ctrl]
+                group_hits[grp].append(ctrl)
+                group_pts += POINTS["group"]
+                group_detail.append(f"{ctrl} {country}")
+                if len(group_hits[grp]) >= QUALIFY_THRESHOLD:
+                    qualified[grp] = True
+
+        elif ctrl in KNOCKOUT_CONTROLS:
+            ko_punched.add(ctrl)
+            if ctrl not in scored_knockouts:
+                round_type, label, parents = KNOCKOUT_CONTROLS[ctrl]
+                if round_type == "QF":
+                    unlocked = all(qualified[g] for g in parents)
+                else:
+                    # SF / Final: parent knockout controls must already be scored
+                    unlocked = all(p in scored_knockouts for p in parents)
+
+                if unlocked:
+                    scored_knockouts.add(ctrl)
+                    knockout_pts += POINTS[round_type]
+
+    # Build knockout detail in canonical bracket order, one entry per control
     knockout_detail = []
-
-    def knockout_unlocked(ctrl_num):
-        """Recursively check if a knockout control is unlocked."""
-        _, _, parents = KNOCKOUT_CONTROLS[ctrl_num]
-        round_type = KNOCKOUT_CONTROLS[ctrl_num][0]
-
-        if round_type == "QF":
-            # Parents are group letters
-            return all(qualified[g] for g in parents)
-        else:
-            # Parents are QF/SF control numbers — must be in scored_knockouts
-            return all(p in scored_knockouts for p in parents)
-
-    # Process knockouts in order (QF first, then SF, then Final)
     for ctrl in [19, 29, 39, 49, 59, 69, 99]:
-        if ctrl not in punched:
-            continue
-        round_type, label, _ = KNOCKOUT_CONTROLS[ctrl]
-        if knockout_unlocked(ctrl):
-            pts = POINTS[round_type]
-            scored_knockouts.add(ctrl)
-            knockout_pts += pts
-            knockout_detail.append(f"{ctrl} {label} +{pts}")
-        else:
-            knockout_detail.append(f"{ctrl} {label} LOCKED (0)")
+        if ctrl in ko_punched:
+            round_type, label, _ = KNOCKOUT_CONTROLS[ctrl]
+            if ctrl in scored_knockouts:
+                knockout_detail.append(f"{ctrl} {label} +{POINTS[round_type]}")
+            else:
+                knockout_detail.append(f"{ctrl} {label} LOCKED (0)")
 
     return {
-        "group_pts":       group_pts,
-        "knockout_pts":    knockout_pts,
-        "raw_score":       group_pts + knockout_pts,
-        "group_hits":      group_hits,
-        "qualified":       qualified,
+        "group_pts":        group_pts,
+        "knockout_pts":     knockout_pts,
+        "raw_score":        group_pts + knockout_pts,
+        "group_hits":       group_hits,
+        "qualified":        qualified,
         "scored_knockouts": scored_knockouts,
-        "group_detail":    group_detail,
-        "knockout_detail": knockout_detail,
+        "group_detail":     group_detail,
+        "knockout_detail":  knockout_detail,
     }
 
 
