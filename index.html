@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Cup Score — The Nower 2026</title>
+  <style>
+    :root {
+      --green-dark:  #0d2b0d;
+      --green-mid:   #1a5c1a;
+      --green-light: #2d8a2d;
+      --gold:        #ffd700;
+      --gold-dim:    #c9a227;
+      --silver:      #b0b8c1;
+      --bronze:      #cd7f32;
+      --white:       #f0f0f0;
+      --text:        #e0e0e0;
+      --red:         #ff6b6b;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--green-dark);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(160deg, #071507 0%, #1a5c1a 50%, #071507 100%);
+      border-bottom: 3px solid var(--gold);
+      padding: 18px 20px 14px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+
+    .header-title {
+      font-size: clamp(1.2em, 4vw, 1.9em);
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .header-sub {
+      font-size: 0.85em;
+      color: var(--silver);
+      margin-top: 4px;
+      letter-spacing: 1px;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .live-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8em;
+      color: var(--silver);
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4caf50;
+      flex-shrink: 0;
+    }
+
+    .live-dot.live { animation: pulse 2s infinite; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 4px #4caf50; }
+      50%       { opacity: 0.3; box-shadow: none; }
+    }
+
+    .refresh-btn {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 5px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.82em;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.1s;
+      letter-spacing: 0.5px;
+    }
+    .refresh-btn:hover   { background: rgba(255,215,0,0.15); }
+    .refresh-btn:active  { transform: scale(0.96); }
+    .refresh-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    /* ── Main content ── */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 16px 10px;
+    }
+
+    .status-banner {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--silver);
+    }
+
+    .status-banner .icon { font-size: 3em; display: block; margin-bottom: 14px; }
+    .status-banner p { font-size: 1.1em; line-height: 1.6; }
+
+    /* ── Meta row ── */
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .runner-count {
+      font-size: 0.82em;
+      color: var(--silver);
+    }
+
+    .hint { font-size: 0.75em; color: #667; }
+
+    /* ── Table ── */
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid #1f4d1f;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.4);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88em;
+    }
+
+    thead th {
+      background: var(--green-mid);
+      color: var(--gold);
+      font-weight: 700;
+      padding: 11px 10px;
+      text-align: left;
+      white-space: nowrap;
+      border-bottom: 2px solid var(--gold-dim);
+      user-select: none;
+    }
+    thead th.r { text-align: right; }
+
+    tbody tr.data-row {
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      cursor: pointer;
+      transition: background 0.12s;
+    }
+    tbody tr.data-row:hover    { background: rgba(255,215,0,0.06); }
+    tbody tr.data-row.expanded { background: rgba(255,215,0,0.04); }
+
+    td { padding: 9px 10px; vertical-align: middle; }
+    td.r { text-align: right; }
+
+    .pos-cell { min-width: 32px; text-align: center; font-weight: 700; }
+
+    .name-cell { font-weight: 600; white-space: nowrap; }
+
+    .club-cell  { color: var(--silver); font-size: 0.83em; white-space: nowrap; }
+
+    .time-cell  { white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .overtime-str { display: block; color: var(--red); font-size: 0.78em; }
+
+    .pts-cell   { font-variant-numeric: tabular-nums; }
+    .pen-cell   { color: var(--red); font-variant-numeric: tabular-nums; }
+
+    .net-cell   {
+      font-weight: 800;
+      font-size: 1.05em;
+      color: var(--gold);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── Journey badges ── */
+    .journey { display: flex; flex-wrap: wrap; gap: 4px; }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 9px;
+      border-radius: 10px;
+      font-size: 0.73em;
+      font-weight: 700;
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+    }
+    .badge-group  { background: #333; color: #aaa; }
+    .badge-qf     { background: #6b3a0a; color: #e8a96e; border: 1px solid var(--bronze); }
+    .badge-sf     { background: #333545; color: #c8cfe0; border: 1px solid var(--silver); }
+    .badge-final  { background: #4a3800; color: var(--gold); border: 1px solid var(--gold); }
+
+    /* ── Source badges (admin/import mode) ── */
+    .src-badge {
+      font-size: 0.65em;
+      padding: 1px 5px;
+      border-radius: 6px;
+      margin-left: 5px;
+      vertical-align: middle;
+      font-weight: 700;
+    }
+    .src-api      { background: #0d3b70; color: #7abfff; }
+    .src-csv      { background: #0d3b1a; color: #6dcc8a; }
+    .src-override { background: #5a1a00; color: #ffb07a; }
+
+    /* ── Expandable detail row ── */
+    tr.detail-row td {
+      padding: 0;
+      background: rgba(0,0,0,0.35);
+      border-bottom: 2px solid var(--green-mid);
+    }
+
+    .detail-inner {
+      padding: 14px 20px 16px;
+      font-size: 0.84em;
+    }
+
+    .detail-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .detail-group-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      padding: 9px 11px;
+    }
+
+    .dg-title   { font-weight: 700; color: var(--gold); margin-bottom: 4px; font-size: 0.95em; }
+    .dg-qual    { margin-bottom: 3px; }
+    .dg-hits    { color: var(--silver); font-size: 0.9em; line-height: 1.5; }
+    .tick       { color: #4caf50; }
+    .cross      { color: var(--red); }
+
+    .detail-ko {
+      margin-top: 8px;
+      line-height: 1.8;
+    }
+    .ko-scored { color: #4caf50; margin-right: 12px; }
+    .ko-locked { color: #555; text-decoration: line-through; margin-right: 12px; }
+
+    .detail-formula {
+      margin-top: 9px;
+      font-family: monospace;
+      font-size: 0.9em;
+      color: var(--silver);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 8px;
+    }
+
+    /* ── Action bar ── */
+    .action-bar {
+      max-width: 1200px;
+      margin: 14px auto 0;
+      padding: 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .action-btn {
+      background: var(--green-mid);
+      border: 1px solid #2d6b2d;
+      color: var(--text);
+      padding: 7px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.83em;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .action-btn:hover { background: var(--green-light); }
+
+    .import-section {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    #csvFileInput { display: none; }
+
+    .import-label {
+      background: transparent;
+      border: 1px solid var(--gold-dim);
+      color: var(--gold);
+      padding: 7px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.83em;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .import-label:hover { background: rgba(255,215,0,0.1); }
+
+    .import-status { font-size: 0.78em; color: var(--silver); }
+
+    .clear-btn {
+      background: transparent;
+      border: 1px solid #555;
+      color: #999;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.78em;
+    }
+    .clear-btn:hover { border-color: var(--red); color: var(--red); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px 0 16px;
+      font-size: 0.75em;
+      color: #334;
+    }
+    footer a { color: #445; text-decoration: none; }
+    footer a:hover { color: #778; }
+
+    /* ── Scoring key ── */
+    .scoring-key {
+      max-width: 1200px;
+      margin: 16px auto 0;
+      padding: 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.75em;
+      color: #667;
+    }
+    .key-item { display: flex; align-items: center; gap: 4px; }
+
+    /* ── Print ── */
+    @media print {
+      body        { background: #fff; color: #000; }
+      header      { background: #fff; border-bottom: 2px solid #000; position: static;
+                    box-shadow: none; }
+      .header-title { color: #000; text-shadow: none; letter-spacing: 1px; }
+      .header-sub   { color: #333; }
+      .toolbar, .action-bar, .scoring-key, footer { display: none !important; }
+      .table-wrap   { border: 1px solid #ccc; box-shadow: none; }
+      thead th      { background: #eee; color: #000; border-bottom: 2px solid #000; }
+      .badge-final  { background: #ffd700; color: #000; border: none; }
+      .badge-sf     { background: #e0e0e0; color: #000; border: none; }
+      .badge-qf     { background: #d4965a; color: #000; border: none; }
+      .badge-group  { background: #ddd;    color: #555; border: none; }
+      .net-cell     { color: #000; }
+      .pen-cell, .overtime-str { color: #c00; }
+      tr.detail-row { display: none !important; }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      td, thead th { padding: 7px 6px; }
+      table         { font-size: 0.82em; }
+      .journey      { min-width: 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-title">🏆 World Cup Score Event</div>
+  <div class="header-sub">The Nower &middot; 22 June 2026 &middot; Mole Valley Orienteering Club</div>
+  <div class="toolbar">
+    <div class="live-indicator">
+      <span class="live-dot" id="liveDot"></span>
+      <span id="lastUpdated">Loading&hellip;</span>
+    </div>
+    <button class="refresh-btn" id="refreshBtn" onclick="refresh()">&#8635; Refresh</button>
+  </div>
+</header>
+
+<main id="mainContent">
+  <div class="status-banner">
+    <span class="icon">&#9917;</span>
+    <p>Loading results&hellip;</p>
+  </div>
+</main>
+
+<div class="action-bar" id="actionBar" style="display:none">
+  <button class="action-btn" onclick="exportCSV()">&#128229; Export CSV</button>
+  <button class="action-btn" onclick="window.print()">&#128438; Print</button>
+  <div class="import-section" id="importSection" style="display:none">
+    <input type="file" id="csvFileInput" accept=".csv" onchange="handleCSVImport(event)">
+    <label for="csvFileInput" class="import-label">&#128228; Import CSV</label>
+    <span class="import-status" id="importStatus"></span>
+    <button class="clear-btn" onclick="clearImport()" id="clearImportBtn" style="display:none">&#10005; Clear</button>
+  </div>
+</div>
+
+<div class="scoring-key" id="scoringKey" style="display:none">
+  <span class="key-item"><span class="badge badge-group">Group stage</span> 10 pts each</span>
+  <span class="key-item"><span class="badge badge-qf">QF</span> 20 pts (need &ge;3 from group)</span>
+  <span class="key-item"><span class="badge badge-sf">SF</span> 30 pts (need both QFs)</span>
+  <span class="key-item"><span class="badge badge-final">Final</span> 50 pts (need both SFs)</span>
+  <span class="key-item" style="color:#aaa">&minus;10 pts per min overtime</span>
+</div>
+
+<footer>
+  <a href="#" onclick="toggleImport(); return false;">Admin</a>
+  &nbsp;&middot;&nbsp;
+  Results auto-refresh every 5 minutes
+</footer>
+
+<script>
+// ── State ────────────────────────────────────────────────────────────────────
+var apiResults    = null;
+var csvResults    = null;
+var mergedResults = null;
+var expandedRows  = new Set();
+var autoTimer     = null;
+var showSrcBadges = false;
+
+var AUTO_REFRESH_MS = 5 * 60 * 1000;
+
+// ── Data constants ───────────────────────────────────────────────────────────
+var FLAGS = {
+  'Brazil':       '🇧🇷',
+  'Argentina':    '🇦🇷',
+  'Mexico':       '🇲🇽',
+  'Uruguay':      '🇺🇾',
+  'USA':          '🇺🇸',
+  'Colombia':     '🇨🇴',
+  'England':      '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+  'France':       '🇫🇷',
+  'Spain':        '🇪🇸',
+  'Portugal':     '🇵🇹',
+  'Netherlands':  '🇳🇱',
+  'Germany':      '🇩🇪',
+  'Morocco':      '🇲🇦',
+  'Senegal':      '🇸🇳',
+  'Belgium':      '🇧🇪',
+  'Japan':        '🇯🇵',
+  'South Korea':  '🇰🇷',
+  'Australia':    '🇦🇺',
+  'Switzerland':  '🇨🇭',
+  'Norway':       '🇳🇴',
+  'Turkey':       '🇹🇷',
+  'Austria':      '🇦🇹',
+  'Denmark':      '🇩🇰',
+  'Scotland':     '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+};
+
+var GROUP_META = {
+  A: { name: 'The Americas Derby',   controls: {11:'Brazil',12:'Argentina',13:'Mexico',14:'Uruguay',15:'USA',16:'Colombia'} },
+  B: { name: 'Old World, New Blood', controls: {21:'England',22:'France',23:'Spain',24:'Portugal',25:'Netherlands',26:'Germany'} },
+  C: { name: 'African Giants',       controls: {31:'Morocco',32:'Senegal',33:'Belgium',34:'Japan',35:'South Korea',36:'Australia'} },
+  D: { name: 'The Dark Horses',      controls: {41:'Switzerland',42:'Norway',43:'Turkey',44:'Austria',45:'Denmark',46:'Scotland'} },
+};
+
+var KO_LABELS = {19:'QF-A',29:'QF-B',39:'QF-C',49:'QF-D',59:'SF1',69:'SF2',99:'Final'};
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function fmtTime(s) {
+  // "0:57:45" → "57:45",  "1:03:30" → "1:03:30"
+  if (!s) return '&mdash;';
+  return esc(s.startsWith('0:') ? s.slice(2) : s);
+}
+
+function furthestRound(sk) {
+  var s = new Set(sk || []);
+  if (s.has(99))                         return 'Final';
+  if (s.has(59) || s.has(69))            return 'SF';
+  if (s.has(19)||s.has(29)||s.has(39)||s.has(49)) return 'QF';
+  return 'Group';
+}
+
+function journeyHTML(sk) {
+  if (!sk || sk.length === 0) return '<span class="badge badge-group">Group stage</span>';
+  var s = new Set(sk);
+  var out = [];
+  [19,29,39,49].forEach(function(c) {
+    if (s.has(c)) out.push('<span class="badge badge-qf">'+KO_LABELS[c]+'</span>');
+  });
+  [59,69].forEach(function(c) {
+    if (s.has(c)) out.push('<span class="badge badge-sf">'+KO_LABELS[c]+'</span>');
+  });
+  if (s.has(99)) out.push('<span class="badge badge-final">&#127942; Final</span>');
+  return out.length ? out.join('') : '<span class="badge badge-group">Group stage</span>';
+}
+
+function posHTML(pos) {
+  if (pos === 1) return '<span style="color:var(--gold)">&#129351;</span>';
+  if (pos === 2) return '<span style="color:var(--silver)">&#129352;</span>';
+  if (pos === 3) return '<span style="color:var(--bronze)">&#129353;</span>';
+  return pos;
+}
+
+function groupCount(groupHits, g) {
+  var h = groupHits ? groupHits[g] : null;
+  if (Array.isArray(h)) return h.length;
+  if (typeof h === 'number') return h;
+  return 0;
+}
+
+// ── Fetch ────────────────────────────────────────────────────────────────────
+
+function loadResults() {
+  var btn = document.getElementById('refreshBtn');
+  var dot = document.getElementById('liveDot');
+  btn.disabled = true;
+  btn.textContent = '…';
+  dot.classList.remove('live');
+
+  return fetch('results.json?v=' + Date.now())
+    .then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function(data) {
+      apiResults = (data.results && data.results.length > 0) ? data.results : null;
+
+      var ts = data.generated_utc
+        ? new Date(data.generated_utc).toLocaleTimeString('en-GB', {hour:'2-digit',minute:'2-digit'})
+        : null;
+      document.getElementById('lastUpdated').textContent =
+        ts ? 'Updated ' + ts : 'Awaiting results';
+
+      dot.classList.add('live');
+      updateDisplay();
+    })
+    .catch(function(e) {
+      document.getElementById('lastUpdated').textContent = 'Could not load results';
+      console.error(e);
+    })
+    .finally(function() {
+      btn.disabled = false;
+      btn.textContent = '↻ Refresh';
+    });
+}
+
+function refresh() { return loadResults(); }
+
+// ── Merge ────────────────────────────────────────────────────────────────────
+
+function mergeData(api, csv) {
+  if (!api && !csv) return null;
+  if (!csv) return api.map(function(r) { return Object.assign({}, r, {_src:'api'}); });
+  if (!api) return csv.map(function(r) { return Object.assign({}, r, {_src:'csv'}); });
+
+  var csvMap = {};
+  csv.forEach(function(r) { csvMap[r.name.trim().toLowerCase()] = r; });
+
+  var out = [];
+  var used = {};
+
+  api.forEach(function(r) {
+    var k = r.name.trim().toLowerCase();
+    if (csvMap[k]) {
+      out.push(Object.assign({}, csvMap[k], {_src:'override'}));
+      used[k] = true;
+    } else {
+      out.push(Object.assign({}, r, {_src:'api'}));
+    }
+  });
+  csv.forEach(function(r) {
+    var k = r.name.trim().toLowerCase();
+    if (!used[k]) out.push(Object.assign({}, r, {_src:'csv'}));
+  });
+
+  out.sort(function(a, b) {
+    return b.net_score - a.net_score || a.total_secs - b.total_secs;
+  });
+  out.forEach(function(r, i) { r.pos = i + 1; });
+  return out;
+}
+
+// ── Render ───────────────────────────────────────────────────────────────────
+
+function updateDisplay() {
+  mergedResults = mergeData(apiResults, csvResults);
+  var main      = document.getElementById('mainContent');
+  var bar       = document.getElementById('actionBar');
+  var key       = document.getElementById('scoringKey');
+
+  if (!mergedResults) {
+    main.innerHTML =
+      '<div class="status-banner">' +
+        '<span class="icon">&#9917;</span>' +
+        '<p>Results will appear here once the event starts<br>and runners begin uploading to MapRun.</p>' +
+      '</div>';
+    bar.style.display = 'none';
+    key.style.display = 'none';
+    return;
+  }
+
+  bar.style.display = 'flex';
+  key.style.display = 'flex';
+  renderTable(mergedResults);
+}
+
+function renderTable(rows) {
+  var main = document.getElementById('mainContent');
+  var html = '<div class="meta-row">' +
+    '<span class="runner-count">' + rows.length + ' runner' + (rows.length !== 1 ? 's' : '') + '</span>' +
+    '<span class="hint">Click a row to expand</span>' +
+    '</div>';
+
+  html += '<div class="table-wrap"><table id="rt"><thead><tr>' +
+    '<th class="r">Pos</th>' +
+    '<th>Name</th>' +
+    '<th>Club</th>' +
+    '<th>Time</th>' +
+    '<th class="r">Grp</th>' +
+    '<th class="r">KO</th>' +
+    '<th class="r">Pen</th>' +
+    '<th class="r">Net</th>' +
+    '<th>Journey</th>' +
+    '</tr></thead><tbody>';
+
+  rows.forEach(function(r, i) {
+    var exp = expandedRows.has(i);
+
+    var otStr = r.overtime_secs > 0
+      ? '<span class="overtime-str">+' + Math.floor(r.overtime_secs/60) + 'm' +
+        String(r.overtime_secs % 60).padStart(2,'0') + 's</span>'
+      : '';
+
+    var srcBadge = '';
+    if (showSrcBadges && r._src) {
+      var srcCls = r._src === 'api' ? 'src-api' : r._src === 'csv' ? 'src-csv' : 'src-override';
+      var srcLbl = r._src === 'api' ? 'API' : r._src === 'csv' ? 'CSV' : 'CSV↑';
+      srcBadge = '<span class="src-badge ' + srcCls + '">' + srcLbl + '</span>';
+    }
+
+    html += '<tr id="dr' + i + '" class="data-row' + (exp ? ' expanded' : '') + '" onclick="toggleRow(' + i + ')">' +
+      '<td class="pos-cell r">' + posHTML(r.pos) + '</td>' +
+      '<td class="name-cell">' + esc(r.name) + srcBadge + '</td>' +
+      '<td class="club-cell">' + esc(r.club || '—') + '</td>' +
+      '<td class="time-cell">' + fmtTime(r.total_time) + otStr + '</td>' +
+      '<td class="pts-cell r">' + r.group_pts + '</td>' +
+      '<td class="pts-cell r">' + r.knockout_pts + '</td>' +
+      '<td class="pen-cell r">' + (r.penalty > 0 ? '&minus;' + r.penalty : '&mdash;') + '</td>' +
+      '<td class="net-cell r">' + r.net_score + '</td>' +
+      '<td><div class="journey">' + journeyHTML(r.scored_knockouts) + '</div></td>' +
+      '</tr>' +
+      '<tr class="detail-row" id="dd' + i + '" style="display:' + (exp ? 'table-row' : 'none') + '">' +
+        '<td colspan="9">' + buildDetail(r) + '</td>' +
+      '</tr>';
+  });
+
+  html += '</tbody></table></div>';
+  main.innerHTML = html;
+}
+
+function buildDetail(r) {
+  var q  = r.qualified   || {};
+  var gh = r.group_hits  || {};
+  var gd = r.group_detail || [];
+
+  // Build group cards
+  var groupsHTML = '<div class="detail-groups">';
+  ['A','B','C','D'].forEach(function(g) {
+    var meta  = GROUP_META[g];
+    var count = groupCount(gh, g);
+    var qual  = !!q[g];
+
+    // Countries punched — try to extract from group_detail, else just show count
+    var hitNames = '';
+    if (gd.length > 0) {
+      var prefixRe = g==='A' ? /^1[1-6] / : g==='B' ? /^2[1-6] / : g==='C' ? /^3[1-6] / : /^4[1-6] /;
+      var names = gd.filter(function(d){ return prefixRe.test(d); })
+                    .map(function(d){
+                      var country = d.replace(/^\d+ /, '');
+                      return (FLAGS[country]||'') + ' ' + country;
+                    });
+      hitNames = names.length ? names.join(', ') : 'none';
+    } else {
+      hitNames = count + ' control' + (count !== 1 ? 's' : '');
+    }
+
+    groupsHTML +=
+      '<div class="detail-group-card">' +
+        '<div class="dg-title">Group ' + g + ' — ' + meta.name + '</div>' +
+        '<div class="dg-qual">' +
+          (qual ? '<span class="tick">&#10003; Qualified</span>' : '<span class="cross">&#10007; ' + count + '/6</span>') +
+          ' (' + count + '/6)' +
+        '</div>' +
+        '<div class="dg-hits">' + hitNames + '</div>' +
+      '</div>';
+  });
+  groupsHTML += '</div>';
+
+  // Knockout detail
+  var koHTML = '';
+  var kd = r.knockout_detail || [];
+  if (kd.length > 0) {
+    var items = kd.map(function(d) {
+      var locked = d.indexOf('LOCKED') !== -1;
+      return '<span class="' + (locked ? 'ko-locked' : 'ko-scored') + '">' +
+             (locked ? '✗' : '✓') + ' ' + esc(d) + '</span>';
+    });
+    koHTML = '<div class="detail-ko"><strong>Knockouts:</strong> ' + items.join('') + '</div>';
+  }
+
+  var formula =
+    r.group_pts + ' (group) + ' + r.knockout_pts + ' (KO) &minus; ' +
+    r.penalty + ' (penalty) = <strong style="color:var(--gold)">' + r.net_score + '</strong>';
+
+  return '<div class="detail-inner">' + groupsHTML + koHTML +
+         '<div class="detail-formula">' + formula + '</div></div>';
+}
+
+function toggleRow(i) {
+  var det  = document.getElementById('dd' + i);
+  var main = document.getElementById('dr' + i);
+  if (expandedRows.has(i)) {
+    expandedRows.delete(i);
+    det.style.display  = 'none';
+    if (main) main.classList.remove('expanded');
+  } else {
+    expandedRows.add(i);
+    det.style.display  = 'table-row';
+    if (main) main.classList.add('expanded');
+  }
+}
+
+// ── CSV Export ───────────────────────────────────────────────────────────────
+
+function exportCSV() {
+  if (!mergedResults || !mergedResults.length) return;
+
+  var headers = ['Pos','Name','Club','Start','Finish','Time',
+    'GrpA','GrpB','GrpC','GrpD','QualA','QualB','QualC','QualD',
+    'GroupPts','KnockoutPts','Penalty','NetScore','Knockouts'];
+
+  var lines = [headers];
+  mergedResults.forEach(function(r) {
+    var q  = r.qualified  || {};
+    var gh = r.group_hits || {};
+    var cnt = function(g) { return groupCount(gh, g); };
+    lines.push([
+      r.pos, r.name, r.club || '',
+      r.start_local || '', r.finish_local || '', r.total_time || '',
+      cnt('A'), cnt('B'), cnt('C'), cnt('D'),
+      q.A?'Y':'N', q.B?'Y':'N', q.C?'Y':'N', q.D?'Y':'N',
+      r.group_pts, r.knockout_pts, r.penalty, r.net_score,
+      (r.knockout_detail || []).join(' | '),
+    ]);
+  });
+
+  var csv = lines.map(function(row) {
+    return row.map(function(v) { return '"' + String(v).replace(/"/g,'""') + '"'; }).join(',');
+  }).join('\r\n');
+
+  var blob = new Blob([csv], {type:'text/csv'});
+  var url  = URL.createObjectURL(blob);
+  var a    = document.createElement('a');
+  a.href     = url;
+  a.download = 'nower-worldcup-' + new Date().toISOString().slice(0,16).replace('T','-') + '.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ── CSV Import ───────────────────────────────────────────────────────────────
+
+function parseTimeSecs(s) {
+  if (!s) return 0;
+  var p = s.split(':').map(Number);
+  if (p.length === 3) return p[0]*3600 + p[1]*60 + p[2];
+  if (p.length === 2) return p[0]*60  + p[1];
+  return 0;
+}
+
+function parseScoredKOs(str) {
+  if (!str) return [];
+  return str.split('|').map(function(s){ return s.trim(); })
+    .filter(function(s){ return s && s.indexOf('LOCKED') === -1 && /^\d+/.test(s); })
+    .map(function(s){ return parseInt(s); })
+    .filter(function(n){ return !isNaN(n); });
+}
+
+function parseCSVRow(line) {
+  var result = [], cur = '', inQ = false;
+  for (var i = 0; i < line.length; i++) {
+    var c = line[i];
+    if (c === '"') {
+      if (inQ && line[i+1] === '"') { cur += '"'; i++; }
+      else inQ = !inQ;
+    } else if (c === ',' && !inQ) {
+      result.push(cur); cur = '';
+    } else {
+      cur += c;
+    }
+  }
+  result.push(cur);
+  return result;
+}
+
+function handleCSVImport(event) {
+  var file = event.target.files[0];
+  if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      var rows = parseCSVText(e.target.result);
+      csvResults = rows;
+      document.getElementById('importStatus').textContent =
+        '✓ ' + rows.length + ' runner' + (rows.length !== 1 ? 's' : '') + ' from ' + file.name;
+      document.getElementById('clearImportBtn').style.display = '';
+      updateDisplay();
+    } catch(err) {
+      document.getElementById('importStatus').textContent = '✗ ' + err.message;
+    }
+  };
+  reader.readAsText(file);
+}
+
+function parseCSVText(text) {
+  var lines = text.split(/\r?\n/).filter(function(l){ return l.trim(); });
+  if (lines.length < 2) throw new Error('No data rows');
+
+  var headers = parseCSVRow(lines[0]).map(function(h){ return h.trim(); });
+  var idx = function(h){ return headers.indexOf(h); };
+  var get = function(cols, h){ return (cols[idx(h)] || '').trim(); };
+
+  return lines.slice(1).filter(function(l){ return l.trim(); }).map(function(line) {
+    var cols       = parseCSVRow(line);
+    var totalTime  = get(cols,'Time');
+    var totalSecs  = parseTimeSecs(totalTime);
+    var koStr      = get(cols,'Knockouts');
+    var scoredKOs  = parseScoredKOs(koStr);
+    var koDetail   = koStr ? koStr.split('|').map(function(s){ return s.trim(); }).filter(Boolean) : [];
+    var grpPts     = parseInt(get(cols,'GroupPts'))    || 0;
+    var koPts      = parseInt(get(cols,'KnockoutPts')) || 0;
+
+    return {
+      pos:             parseInt(get(cols,'Pos')) || 0,
+      name:            get(cols,'Name'),
+      club:            get(cols,'Club'),
+      classifier:      'OK',
+      start_local:     get(cols,'Start'),
+      finish_local:    get(cols,'Finish'),
+      total_time:      totalTime,
+      total_secs:      totalSecs,
+      group_pts:       grpPts,
+      knockout_pts:    koPts,
+      raw_score:       grpPts + koPts,
+      penalty:         parseInt(get(cols,'Penalty'))  || 0,
+      overtime_secs:   Math.max(0, totalSecs - 3600),
+      net_score:       parseInt(get(cols,'NetScore')) || 0,
+      qualified: {
+        A: get(cols,'QualA')==='Y', B: get(cols,'QualB')==='Y',
+        C: get(cols,'QualC')==='Y', D: get(cols,'QualD')==='Y',
+      },
+      scored_knockouts: scoredKOs,
+      group_detail:     [],
+      knockout_detail:  koDetail,
+      group_hits: {
+        A: parseInt(get(cols,'GrpA')) || 0,
+        B: parseInt(get(cols,'GrpB')) || 0,
+        C: parseInt(get(cols,'GrpC')) || 0,
+        D: parseInt(get(cols,'GrpD')) || 0,
+      },
+      furthest_round: furthestRound(scoredKOs),
+    };
+  });
+}
+
+function clearImport() {
+  csvResults = null;
+  document.getElementById('importStatus').textContent  = '';
+  document.getElementById('clearImportBtn').style.display = 'none';
+  document.getElementById('csvFileInput').value = '';
+  updateDisplay();
+}
+
+// ── Admin toggle ─────────────────────────────────────────────────────────────
+
+function toggleImport() {
+  var sec     = document.getElementById('importSection');
+  var visible = sec.style.display !== 'none';
+  sec.style.display = visible ? 'none' : 'flex';
+  showSrcBadges = !visible;
+  if (mergedResults) renderTable(mergedResults);
+}
+
+// ── Init ─────────────────────────────────────────────────────────────────────
+
+if (window.location.search.indexOf('import') !== -1) {
+  document.getElementById('importSection').style.display = 'flex';
+  showSrcBadges = true;
+}
+
+autoTimer = setInterval(loadResults, AUTO_REFRESH_MS);
+loadResults();
+</script>
+</body>
+</html>

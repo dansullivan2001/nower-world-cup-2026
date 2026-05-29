@@ -1,0 +1,42 @@
+name: Fetch and publish results
+
+on:
+  schedule:
+    # Every 5 min between 16:00–22:59 UTC on 22 June 2026 (= 17:00–23:59 BST)
+    - cron: '*/5 16-22 22 6 *'
+  workflow_dispatch:
+    # Manual trigger available any time — useful for testing and post-event corrections
+
+permissions:
+  contents: write
+
+jobs:
+  update-results:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch and score results
+        run: |
+          if python3 files/worldcup_results.py \
+              --event "Nower Jun26 MVOC PXAS ScoreQ60" \
+              --json results.json; then
+            echo "Results updated successfully"
+          else
+            echo "Fetch failed — preserving previous results.json"
+            # Only create a seed file if none exists yet
+            if [ ! -f results.json ]; then
+              echo '{"status":"no_data","generated_utc":null,"runner_count":0,"results":[]}' > results.json
+            fi
+          fi
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add results.json
+          git diff --staged --quiet || (
+            git commit -m "results: $(date -u +'%H:%MZ')" &&
+            git push
+          )
