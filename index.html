@@ -735,10 +735,15 @@ function buildDetail(r) {
     r.penalty + ' (penalty) = <strong style="color:var(--gold)">' + r.net_score + '</strong>';
 
   var controlsHTML = '';
-  var gd2 = r.group_detail || [];
-  if (gd2.length > 0) {
-    var nums = gd2.map(function(d) { return d.split(' ')[0]; });
-    controlsHTML = '<div class="detail-controls">Controls visited: ' + nums.join(' &middot; ') + '</div>';
+  var pl = r.punch_log || [];
+  if (pl.length > 0) {
+    var parts = pl.map(function(entry) {
+      var ctrl = entry[0], status = entry[1];
+      if (status === 'scored')    return '<span style="color:#4caf50;font-weight:700">' + ctrl + '</span>';
+      if (status === 'locked')    return '<span style="color:var(--red);text-decoration:line-through">' + ctrl + '</span>';
+      /* duplicate */             return '<span style="color:#555;text-decoration:line-through">' + ctrl + '</span>';
+    });
+    controlsHTML = '<div class="detail-controls">Controls visited: ' + parts.join(' &middot; ') + '</div>';
   }
 
   return '<div class="detail-inner">' + groupsHTML + koHTML +

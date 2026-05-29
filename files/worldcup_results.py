@@ -108,6 +108,9 @@ def score_runner(punch_ids_str):
     qualified  = {"A": False, "B": False, "C": False, "D": False}
     group_pts  = 0
     group_detail = []
+    # punch_log: [[ctrl, status], ...] for every punch in visit order.
+    # status: "scored" | "locked" (rules not met) | "duplicate" (already counted)
+    punch_log    = []
 
     scored_knockouts = set()
     ko_punched       = set()   # all knockout controls punched at least once
@@ -125,10 +128,15 @@ def score_runner(punch_ids_str):
                 group_detail.append(f"{ctrl} {country}")
                 if len(group_hits[grp]) >= QUALIFY_THRESHOLD:
                     qualified[grp] = True
+                punch_log.append([ctrl, "scored"])
+            else:
+                punch_log.append([ctrl, "duplicate"])
 
         elif ctrl in KNOCKOUT_CONTROLS:
             ko_punched.add(ctrl)
-            if ctrl not in scored_knockouts:
+            if ctrl in scored_knockouts:
+                punch_log.append([ctrl, "duplicate"])
+            else:
                 round_type, label, parents = KNOCKOUT_CONTROLS[ctrl]
                 if round_type == "QF":
                     unlocked = all(qualified[g] for g in parents)
@@ -139,6 +147,9 @@ def score_runner(punch_ids_str):
                 if unlocked:
                     scored_knockouts.add(ctrl)
                     knockout_pts += POINTS[round_type]
+                    punch_log.append([ctrl, "scored"])
+                else:
+                    punch_log.append([ctrl, "locked"])
 
     # Build knockout detail in canonical bracket order, one entry per control
     knockout_detail = []
@@ -159,6 +170,7 @@ def score_runner(punch_ids_str):
         "scored_knockouts": scored_knockouts,
         "group_detail":     group_detail,
         "knockout_detail":  knockout_detail,
+        "punch_log":        punch_log,
     }
 
 
@@ -208,6 +220,7 @@ def process_results(api_results):
             "scored_knockouts": breakdown["scored_knockouts"],
             "group_detail":  breakdown["group_detail"],
             "knockout_detail": breakdown["knockout_detail"],
+            "punch_log":     breakdown["punch_log"],
             "group_hits":    breakdown["group_hits"],
         })
 
@@ -307,6 +320,7 @@ def export_json(processed, filename, event_name):
             "scored_knockouts": sorted(r["scored_knockouts"]),
             "group_detail":     r["group_detail"],
             "knockout_detail":  r["knockout_detail"],
+            "punch_log":        r["punch_log"],
             "group_hits":       {g: hits for g, hits in r["group_hits"].items()},
             "furthest_round":   furthest,
         })
