@@ -5,7 +5,7 @@ Mole Valley Orienteering Club - The Nower, 22 June 2026
 
 Fetches results from the MapRun API and applies World Cup scoring rules:
   - Group stage controls: 10 pts each (groups A/B/C/D, 6 controls each)
-  - Quarter-final controls: 20 pts each (unlocked if >=3 from parent group)
+  - Quarter-final controls: 20 pts each (unlocked if >=5 from parent group)
   - Semi-final controls: 30 pts each (unlocked if both QFs in the half scored)
   - Final control: 50 pts (unlocked if both SFs scored)
   - Time penalty: -1 pt per 2 seconds (or part thereof) over 60 minutes
@@ -81,7 +81,7 @@ POINTS = {
     "F":     50,
 }
 
-QUALIFY_THRESHOLD = 3   # controls needed from a group to unlock that group's QF
+QUALIFY_THRESHOLD = 5   # controls needed from a group to unlock that group's QF
 
 # ---------------------------------------------------------------------------
 # Scoring engine
@@ -425,22 +425,22 @@ DEMO_RESULTS = [
         "TotalTimehhmmss": "0:58:10", "TotalTimeSecs": 3490,
         "punchControlIds": ["11","12","13","14","15","16",   # All Group A
                             "21","22","23","24","25","26",   # All Group B
-                            "31","32","33",                  # 3 from Group C (qualifies)
+                            "31","32","33",                  # 3 from Group C (doesn't qualify)
                             "41","42",                       # 2 from Group D (doesn't qualify)
                             "19","29","39","49",             # Punches all QFs
                             "59","69",                       # Punches both SFs
                             "99"],                           # Punches Final
         "punchTimeAfterStartSecs": list(range(80, 3490, 90)),
     },
-    {   # Greedy: skips groups, punches knockouts — most score zero
+    {   # Greedy: skips groups, punches knockouts — all score zero
         "Id": 3, "Firstname": "Charlie", "Surname": "Greedy", "Gender": "M",
         "ClubName": "MVOC", "Classifier": "OK",
         "StartPunchTimeLocal": "18:40:00", "FinishPunchTimeLocal": "19:38:20",
         "TotalTimehhmmss": "0:58:20", "TotalTimeSecs": 3500,
         "punchControlIds": ["11","12",                       # 2 from Group A (doesn't qualify)
-                            "21","22","23",                  # 3 from Group B (qualifies)
+                            "21","22","23",                  # 3 from Group B (doesn't qualify)
                             "31","32",                       # 2 from Group C (doesn't qualify)
-                            "41","42","43",                  # 3 from Group D (qualifies)
+                            "41","42","43",                  # 3 from Group D (doesn't qualify)
                             "19","29","39","49","59","69","99"],
         "punchTimeAfterStartSecs": list(range(60, 3500, 80)),
     },
@@ -453,7 +453,7 @@ DEMO_RESULTS = [
                             "21","22","23","24",             # 4 from Group B
                             "31","32","33","34",             # 4 from Group C
                             "41","42","43","44",             # 4 from Group D
-                            "19","29","39","49"],            # All QFs
+                            "19","29","39","49"],            # All QFs (all locked: 4 < 5)
         "punchTimeAfterStartSecs": list(range(120, 3810, 120)),
     },
     {   # Beginner — just group stage controls

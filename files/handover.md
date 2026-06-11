@@ -85,7 +85,7 @@ Group D ──► QF-D (49) ──┴──► SF2 (69) ──┘
 ```
 
 **Unlock rules:**
-- QF unlocks if runner has punched **≥3 controls from its parent group**
+- QF unlocks if runner has punched **≥5 controls from its parent group**
 - SF1 (59) unlocks if **both QF-A (19) and QF-B (29) scored** (not just punched — locked QFs don't count)
 - SF2 (69) unlocks if **both QF-C (39) and QF-D (49) scored**
 - Final (99) unlocks if **both SF1 (59) and SF2 (69) scored**
@@ -161,7 +161,7 @@ The following have been discussed but not yet built:
 ## Key Decisions Already Made
 
 - Progression is **self-enforcing via scoring** (not honour system or marshals) — locked controls score zero, checked by script post-hoc
-- Qualification threshold: **≥3 controls from a group** to unlock that group's QF
+- Qualification threshold: **≥5 controls from a group** to unlock that group's QF
 - Groups chosen for interest, not strict adherence to the real 2026 draw (countries reassigned across groups for variety)
 - No external Python libraries required — script uses stdlib only (`urllib`, `json`, `csv`, `math`)
 - MapRun used purely for GPS punching and result collection; all World Cup scoring logic is external

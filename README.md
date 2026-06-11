@@ -24,7 +24,7 @@ A 60-minute score orienteering event on The Nower (Dorking, Surrey) with a World
 **Maximum score: 430 points**
 
 **Unlock rules:**
-- QF unlocks with ≥3 controls from its parent group
+- QF unlocks with ≥5 controls from its parent group
 - SF1 (59) unlocks with both QF-A (19) and QF-B (29) scored
 - SF2 (69) unlocks with both QF-C (39) and QF-D (49) scored
 - Final (99) unlocks with both SF1 and SF2 scored

@@ -46,10 +46,10 @@ Each quarter-final is linked to its parent group:
 
 | Quarter-final | Unlocked by |
 |---|---|
-| QF-A (control 19) | Punching **3 or more** controls from Group A (11–16) |
-| QF-B (control 29) | Punching **3 or more** controls from Group B (21–26) |
-| QF-C (control 39) | Punching **3 or more** controls from Group C (31–36) |
-| QF-D (control 49) | Punching **3 or more** controls from Group D (41–46) |
+| QF-A (control 19) | Punching **5 or more** controls from Group A (11–16) |
+| QF-B (control 29) | Punching **5 or more** controls from Group B (21–26) |
+| QF-C (control 39) | Punching **5 or more** controls from Group C (31–36) |
+| QF-D (control 49) | Punching **5 or more** controls from Group D (41–46) |
 
 ### Semi-finals
 
@@ -83,7 +83,7 @@ Plan your route to get back on time — a late finish can wipe out more than an 
 
 ## Strategy Notes
 
-- The group stage is where most points are made. You don't need to collect all six from a group — just three to qualify — but all six add up.
+- The group stage is where most points are made. You don't need to collect all six from a group — just five to qualify — but all six add up.
 - A balanced route through all four groups is likely to outscore a deep dive into just one or two.
 - The Final (99) is worth 50 points, but requires punching and qualifying through eight earlier controls. It rewards the runner who covers the most ground efficiently.
 - Going late is almost never worth it. At 10 points per started minute, just over a minute late costs you a quarter-final.
@@ -105,7 +105,7 @@ Plan your route to get back on time — a late finish can wipe out more than an 
 | Rule | Detail |
 |---|---|
 | Time limit | 60 minutes |
-| Group controls | 10 pts each (need ≥3 to qualify for that group's QF) |
+| Group controls | 10 pts each (need ≥5 to qualify for that group's QF) |
 | Quarter-finals | 20 pts each (need both QFs in a half to unlock SF) |
 | Semi-finals | 30 pts each (need both SFs to unlock Final) |
 | Final | 50 pts |
