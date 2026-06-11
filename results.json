@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-05-29T21:26:04Z",
+  "generated_utc": "2026-06-11T21:18:40Z",
   "event": "DEMO",
-  "runner_count": 8,
+  "runner_count": 5,
   "status": "live",
   "results": [
     {
@@ -30,8 +30,8 @@
         29,
         39,
         49,
-        59,
-        69,
+        79,
+        89,
         99
       ],
       "group_detail": [
@@ -65,8 +65,8 @@
         "29 QF-B +20",
         "39 QF-C +20",
         "49 QF-D +20",
-        "59 SF1 +30",
-        "69 SF2 +30",
+        "79 SF1 +30",
+        "89 SF2 +30",
         "99 Final +50"
       ],
       "punch_log": [
@@ -183,11 +183,11 @@
           "scored"
         ],
         [
-          59,
+          79,
           "scored"
         ],
         [
-          69,
+          89,
           "scored"
         ],
         [
@@ -233,185 +233,6 @@
     },
     {
       "pos": 2,
-      "name": "Fiona Clever",
-      "club": "MVOC",
-      "classifier": "OK",
-      "start_local": "18:55:00",
-      "finish_local": "19:50:00",
-      "total_time": "0:55:00",
-      "total_secs": 3300,
-      "group_pts": 140,
-      "knockout_pts": 190,
-      "raw_score": 330,
-      "penalty": 0,
-      "overtime_secs": 0,
-      "net_score": 330,
-      "qualified": {
-        "A": true,
-        "B": true,
-        "C": true,
-        "D": true
-      },
-      "scored_knockouts": [
-        19,
-        29,
-        39,
-        49,
-        59,
-        69,
-        99
-      ],
-      "group_detail": [
-        "11 Brazil",
-        "12 Argentina",
-        "13 Mexico",
-        "14 Uruguay",
-        "21 England",
-        "22 France",
-        "23 Spain",
-        "24 Portugal",
-        "31 Morocco",
-        "32 Senegal",
-        "33 Belgium",
-        "41 Switzerland",
-        "42 Norway",
-        "43 Turkey"
-      ],
-      "knockout_detail": [
-        "19 QF-A +20",
-        "29 QF-B +20",
-        "39 QF-C +20",
-        "49 QF-D +20",
-        "59 SF1 +30",
-        "69 SF2 +30",
-        "99 Final +50"
-      ],
-      "punch_log": [
-        [
-          11,
-          "scored"
-        ],
-        [
-          12,
-          "scored"
-        ],
-        [
-          19,
-          "locked"
-        ],
-        [
-          13,
-          "scored"
-        ],
-        [
-          14,
-          "scored"
-        ],
-        [
-          21,
-          "scored"
-        ],
-        [
-          22,
-          "scored"
-        ],
-        [
-          23,
-          "scored"
-        ],
-        [
-          24,
-          "scored"
-        ],
-        [
-          31,
-          "scored"
-        ],
-        [
-          32,
-          "scored"
-        ],
-        [
-          33,
-          "scored"
-        ],
-        [
-          41,
-          "scored"
-        ],
-        [
-          42,
-          "scored"
-        ],
-        [
-          43,
-          "scored"
-        ],
-        [
-          19,
-          "scored"
-        ],
-        [
-          29,
-          "scored"
-        ],
-        [
-          39,
-          "scored"
-        ],
-        [
-          49,
-          "scored"
-        ],
-        [
-          59,
-          "scored"
-        ],
-        [
-          69,
-          "scored"
-        ],
-        [
-          99,
-          "scored"
-        ],
-        [
-          14,
-          "duplicate"
-        ],
-        [
-          29,
-          "duplicate"
-        ]
-      ],
-      "group_hits": {
-        "A": [
-          11,
-          12,
-          13,
-          14
-        ],
-        "B": [
-          21,
-          22,
-          23,
-          24
-        ],
-        "C": [
-          31,
-          32,
-          33
-        ],
-        "D": [
-          41,
-          42,
-          43
-        ]
-      },
-      "furthest_round": "Final"
-    },
-    {
-      "pos": 3,
       "name": "Bob Smith",
       "club": "MVOC",
       "classifier": "OK",
@@ -420,22 +241,20 @@
       "total_time": "0:58:10",
       "total_secs": 3490,
       "group_pts": 170,
-      "knockout_pts": 90,
-      "raw_score": 260,
+      "knockout_pts": 40,
+      "raw_score": 210,
       "penalty": 0,
       "overtime_secs": 0,
-      "net_score": 260,
+      "net_score": 210,
       "qualified": {
         "A": true,
         "B": true,
-        "C": true,
+        "C": false,
         "D": false
       },
       "scored_knockouts": [
         19,
-        29,
-        39,
-        59
+        29
       ],
       "group_detail": [
         "11 Brazil",
@@ -459,10 +278,10 @@
       "knockout_detail": [
         "19 QF-A +20",
         "29 QF-B +20",
-        "39 QF-C +20",
+        "39 QF-C LOCKED (0)",
         "49 QF-D LOCKED (0)",
-        "59 SF1 +30",
-        "69 SF2 LOCKED (0)",
+        "79 SF1 LOCKED (0)",
+        "89 SF2 LOCKED (0)",
         "99 Final LOCKED (0)"
       ],
       "punch_log": [
@@ -544,18 +363,18 @@
         ],
         [
           39,
-          "scored"
+          "locked"
         ],
         [
           49,
           "locked"
         ],
         [
-          59,
-          "scored"
+          79,
+          "locked"
         ],
         [
-          69,
+          89,
           "locked"
         ],
         [
@@ -590,309 +409,10 @@
           42
         ]
       },
-      "furthest_round": "SF"
-    },
-    {
-      "pos": 4,
-      "name": "Charlie Greedy",
-      "club": "MVOC",
-      "classifier": "OK",
-      "start_local": "18:40:00",
-      "finish_local": "19:38:20",
-      "total_time": "0:58:20",
-      "total_secs": 3500,
-      "group_pts": 100,
-      "knockout_pts": 40,
-      "raw_score": 140,
-      "penalty": 0,
-      "overtime_secs": 0,
-      "net_score": 140,
-      "qualified": {
-        "A": false,
-        "B": true,
-        "C": false,
-        "D": true
-      },
-      "scored_knockouts": [
-        29,
-        49
-      ],
-      "group_detail": [
-        "11 Brazil",
-        "12 Argentina",
-        "21 England",
-        "22 France",
-        "23 Spain",
-        "31 Morocco",
-        "32 Senegal",
-        "41 Switzerland",
-        "42 Norway",
-        "43 Turkey"
-      ],
-      "knockout_detail": [
-        "19 QF-A LOCKED (0)",
-        "29 QF-B +20",
-        "39 QF-C LOCKED (0)",
-        "49 QF-D +20",
-        "59 SF1 LOCKED (0)",
-        "69 SF2 LOCKED (0)",
-        "99 Final LOCKED (0)"
-      ],
-      "punch_log": [
-        [
-          11,
-          "scored"
-        ],
-        [
-          12,
-          "scored"
-        ],
-        [
-          21,
-          "scored"
-        ],
-        [
-          22,
-          "scored"
-        ],
-        [
-          23,
-          "scored"
-        ],
-        [
-          31,
-          "scored"
-        ],
-        [
-          32,
-          "scored"
-        ],
-        [
-          41,
-          "scored"
-        ],
-        [
-          42,
-          "scored"
-        ],
-        [
-          43,
-          "scored"
-        ],
-        [
-          19,
-          "locked"
-        ],
-        [
-          29,
-          "scored"
-        ],
-        [
-          39,
-          "locked"
-        ],
-        [
-          49,
-          "scored"
-        ],
-        [
-          59,
-          "locked"
-        ],
-        [
-          69,
-          "locked"
-        ],
-        [
-          99,
-          "locked"
-        ]
-      ],
-      "group_hits": {
-        "A": [
-          11,
-          12
-        ],
-        "B": [
-          21,
-          22,
-          23
-        ],
-        "C": [
-          31,
-          32
-        ],
-        "D": [
-          41,
-          42,
-          43
-        ]
-      },
       "furthest_round": "QF"
     },
     {
-      "pos": 5,
-      "name": "Diana Steady",
-      "club": "MVOC",
-      "classifier": "OK",
-      "start_local": "18:45:00",
-      "finish_local": "19:48:30",
-      "total_time": "1:03:30",
-      "total_secs": 3810,
-      "group_pts": 160,
-      "knockout_pts": 80,
-      "raw_score": 240,
-      "penalty": 105,
-      "overtime_secs": 210,
-      "net_score": 135,
-      "qualified": {
-        "A": true,
-        "B": true,
-        "C": true,
-        "D": true
-      },
-      "scored_knockouts": [
-        19,
-        29,
-        39,
-        49
-      ],
-      "group_detail": [
-        "11 Brazil",
-        "12 Argentina",
-        "13 Mexico",
-        "14 Uruguay",
-        "21 England",
-        "22 France",
-        "23 Spain",
-        "24 Portugal",
-        "31 Morocco",
-        "32 Senegal",
-        "33 Belgium",
-        "34 Japan",
-        "41 Switzerland",
-        "42 Norway",
-        "43 Turkey",
-        "44 Austria"
-      ],
-      "knockout_detail": [
-        "19 QF-A +20",
-        "29 QF-B +20",
-        "39 QF-C +20",
-        "49 QF-D +20"
-      ],
-      "punch_log": [
-        [
-          11,
-          "scored"
-        ],
-        [
-          12,
-          "scored"
-        ],
-        [
-          13,
-          "scored"
-        ],
-        [
-          14,
-          "scored"
-        ],
-        [
-          21,
-          "scored"
-        ],
-        [
-          22,
-          "scored"
-        ],
-        [
-          23,
-          "scored"
-        ],
-        [
-          24,
-          "scored"
-        ],
-        [
-          31,
-          "scored"
-        ],
-        [
-          32,
-          "scored"
-        ],
-        [
-          33,
-          "scored"
-        ],
-        [
-          34,
-          "scored"
-        ],
-        [
-          41,
-          "scored"
-        ],
-        [
-          42,
-          "scored"
-        ],
-        [
-          43,
-          "scored"
-        ],
-        [
-          44,
-          "scored"
-        ],
-        [
-          19,
-          "scored"
-        ],
-        [
-          29,
-          "scored"
-        ],
-        [
-          39,
-          "scored"
-        ],
-        [
-          49,
-          "scored"
-        ]
-      ],
-      "group_hits": {
-        "A": [
-          11,
-          12,
-          13,
-          14
-        ],
-        "B": [
-          21,
-          22,
-          23,
-          24
-        ],
-        "C": [
-          31,
-          32,
-          33,
-          34
-        ],
-        "D": [
-          41,
-          42,
-          43,
-          44
-        ]
-      },
-      "furthest_round": "QF"
-    },
-    {
-      "pos": 6,
+      "pos": 3,
       "name": "Ed Newbie",
       "club": "MVOC",
       "classifier": "OK",
@@ -907,10 +427,10 @@
       "overtime_secs": 0,
       "net_score": 120,
       "qualified": {
-        "A": true,
-        "B": true,
-        "C": true,
-        "D": true
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
       },
       "scored_knockouts": [],
       "group_detail": [
@@ -1003,38 +523,30 @@
       "furthest_round": "Group"
     },
     {
-      "pos": 7,
-      "name": "George Hasty",
+      "pos": 4,
+      "name": "Charlie Greedy",
       "club": "MVOC",
       "classifier": "OK",
-      "start_local": "18:42:00",
-      "finish_local": "19:47:00",
-      "total_time": "1:05:00",
-      "total_secs": 3900,
-      "group_pts": 120,
-      "knockout_pts": 140,
-      "raw_score": 260,
-      "penalty": 150,
-      "overtime_secs": 300,
-      "net_score": 110,
+      "start_local": "18:40:00",
+      "finish_local": "19:38:20",
+      "total_time": "0:58:20",
+      "total_secs": 3500,
+      "group_pts": 100,
+      "knockout_pts": 0,
+      "raw_score": 100,
+      "penalty": 0,
+      "overtime_secs": 0,
+      "net_score": 100,
       "qualified": {
-        "A": true,
-        "B": true,
-        "C": true,
-        "D": true
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
       },
-      "scored_knockouts": [
-        19,
-        29,
-        39,
-        49,
-        59,
-        69
-      ],
+      "scored_knockouts": [],
       "group_detail": [
         "11 Brazil",
         "12 Argentina",
-        "13 Mexico",
         "21 England",
         "22 France",
         "23 Spain",
@@ -1042,36 +554,24 @@
         "32 Senegal",
         "41 Switzerland",
         "42 Norway",
-        "43 Turkey",
-        "33 Belgium"
+        "43 Turkey"
       ],
       "knockout_detail": [
-        "19 QF-A +20",
-        "29 QF-B +20",
-        "39 QF-C +20",
-        "49 QF-D +20",
-        "59 SF1 +30",
-        "69 SF2 +30"
+        "19 QF-A LOCKED (0)",
+        "29 QF-B LOCKED (0)",
+        "39 QF-C LOCKED (0)",
+        "49 QF-D LOCKED (0)",
+        "79 SF1 LOCKED (0)",
+        "89 SF2 LOCKED (0)",
+        "99 Final LOCKED (0)"
       ],
       "punch_log": [
-        [
-          19,
-          "locked"
-        ],
-        [
-          39,
-          "locked"
-        ],
         [
           11,
           "scored"
         ],
         [
           12,
-          "scored"
-        ],
-        [
-          13,
           "scored"
         ],
         [
@@ -1108,11 +608,11 @@
         ],
         [
           19,
-          "scored"
+          "locked"
         ],
         [
           29,
-          "scored"
+          "locked"
         ],
         [
           39,
@@ -1120,34 +620,25 @@
         ],
         [
           49,
-          "scored"
+          "locked"
         ],
         [
-          59,
-          "scored"
+          79,
+          "locked"
         ],
         [
-          33,
-          "scored"
+          89,
+          "locked"
         ],
         [
-          39,
-          "scored"
-        ],
-        [
-          69,
-          "scored"
-        ],
-        [
-          59,
-          "duplicate"
+          99,
+          "locked"
         ]
       ],
       "group_hits": {
         "A": [
           11,
-          12,
-          13
+          12
         ],
         "B": [
           21,
@@ -1156,8 +647,7 @@
         ],
         "C": [
           31,
-          32,
-          33
+          32
         ],
         "D": [
           41,
@@ -1165,25 +655,25 @@
           43
         ]
       },
-      "furthest_round": "SF"
+      "furthest_round": "Group"
     },
     {
-      "pos": 8,
-      "name": "Hannah Lost",
+      "pos": 5,
+      "name": "Diana Steady",
       "club": "MVOC",
       "classifier": "OK",
-      "start_local": "19:10:00",
-      "finish_local": "19:55:30",
-      "total_time": "0:45:30",
-      "total_secs": 2730,
-      "group_pts": 70,
+      "start_local": "18:45:00",
+      "finish_local": "19:48:30",
+      "total_time": "1:03:30",
+      "total_secs": 3810,
+      "group_pts": 160,
       "knockout_pts": 0,
-      "raw_score": 70,
-      "penalty": 0,
-      "overtime_secs": 0,
-      "net_score": 70,
+      "raw_score": 160,
+      "penalty": 105,
+      "overtime_secs": 210,
+      "net_score": 55,
       "qualified": {
-        "A": true,
+        "A": false,
         "B": false,
         "C": false,
         "D": false
@@ -1191,17 +681,43 @@
       "scored_knockouts": [],
       "group_detail": [
         "11 Brazil",
+        "12 Argentina",
+        "13 Mexico",
+        "14 Uruguay",
         "21 England",
         "22 France",
-        "12 Argentina",
+        "23 Spain",
+        "24 Portugal",
         "31 Morocco",
-        "13 Mexico",
-        "32 Senegal"
+        "32 Senegal",
+        "33 Belgium",
+        "34 Japan",
+        "41 Switzerland",
+        "42 Norway",
+        "43 Turkey",
+        "44 Austria"
       ],
-      "knockout_detail": [],
+      "knockout_detail": [
+        "19 QF-A LOCKED (0)",
+        "29 QF-B LOCKED (0)",
+        "39 QF-C LOCKED (0)",
+        "49 QF-D LOCKED (0)"
+      ],
       "punch_log": [
         [
           11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          14,
           "scored"
         ],
         [
@@ -1209,27 +725,19 @@
           "scored"
         ],
         [
-          11,
-          "duplicate"
-        ],
-        [
           22,
           "scored"
         ],
         [
-          11,
-          "duplicate"
+          23,
+          "scored"
         ],
         [
-          12,
+          24,
           "scored"
         ],
         [
           31,
-          "scored"
-        ],
-        [
-          13,
           "scored"
         ],
         [
@@ -1237,33 +745,71 @@
           "scored"
         ],
         [
-          12,
-          "duplicate"
+          33,
+          "scored"
         ],
         [
-          21,
-          "duplicate"
+          34,
+          "scored"
         ],
         [
-          13,
-          "duplicate"
+          41,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          44,
+          "scored"
+        ],
+        [
+          19,
+          "locked"
+        ],
+        [
+          29,
+          "locked"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          49,
+          "locked"
         ]
       ],
       "group_hits": {
         "A": [
           11,
           12,
-          13
+          13,
+          14
         ],
         "B": [
           21,
-          22
+          22,
+          23,
+          24
         ],
         "C": [
           31,
-          32
+          32,
+          33,
+          34
         ],
-        "D": []
+        "D": [
+          41,
+          42,
+          43,
+          44
+        ]
       },
       "furthest_round": "Group"
     }
