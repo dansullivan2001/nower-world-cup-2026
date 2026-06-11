@@ -29,7 +29,7 @@ The controls are organised just like the real World Cup: **group stage**, **quar
 | Group C — African Giants | 31, 32, 33, 34, 35, 36 | 10 pts |
 | Group D — The Dark Horses | 41, 42, 43, 44, 45, 46 | 10 pts |
 | Quarter-finals | 19, 29, 39, 49 | 20 pts |
-| Semi-finals | 59, 69 | 30 pts |
+| Semi-finals | 79, 89 | 30 pts |
 | Final | 99 | 50 pts |
 
 **Maximum possible score: 430 points**
@@ -38,7 +38,7 @@ The controls are organised just like the real World Cup: **group stage**, **quar
 
 ## Progression Rules — How to Unlock the Knockout Rounds
 
-The knockout controls (19, 29, 39, 49, 59, 69, 99) only score points if you have **qualified** for them. Punching a locked control scores **zero** — the GPS records the visit, but the points don't count.
+The knockout controls (19, 29, 39, 49, 79, 89, 99) only score points if you have **qualified** for them. Punching a locked control scores **zero** — the GPS records the visit, but the points don't count.
 
 ### Quarter-finals
 
@@ -46,23 +46,23 @@ Each quarter-final is linked to its parent group:
 
 | Quarter-final | Unlocked by |
 |---|---|
-| QF-A (control 19) | Punching **3 or more** controls from Group A (11–16) |
-| QF-B (control 29) | Punching **3 or more** controls from Group B (21–26) |
-| QF-C (control 39) | Punching **3 or more** controls from Group C (31–36) |
-| QF-D (control 49) | Punching **3 or more** controls from Group D (41–46) |
+| QF-A (control 19) | Punching **5 or more** controls from Group A (11–16) |
+| QF-B (control 29) | Punching **5 or more** controls from Group B (21–26) |
+| QF-C (control 39) | Punching **5 or more** controls from Group C (31–36) |
+| QF-D (control 49) | Punching **5 or more** controls from Group D (41–46) |
 
 ### Semi-finals
 
 | Semi-final | Unlocked by |
 |---|---|
-| SF1 (control 59) | **Both** QF-A (19) **and** QF-B (29) scored |
-| SF2 (control 69) | **Both** QF-C (39) **and** QF-D (49) scored |
+| SF1 (control 79) | **Both** QF-A (19) **and** QF-C (39) scored |
+| SF2 (control 89) | **Both** QF-B (29) **and** QF-D (49) scored |
 
 ### Final
 
 | Control | Unlocked by |
 |---|---|
-| Final (control 99) | **Both** SF1 (59) **and** SF2 (69) scored |
+| Final (control 99) | **Both** SF1 (79) **and** SF2 (89) scored |
 
 > **Note:** "Scored" means the control was both punched **and** unlocked. Punching a locked quarter-final does not count towards a semi-final.
 
@@ -83,7 +83,7 @@ Plan your route to get back on time — a late finish can wipe out more than an 
 
 ## Strategy Notes
 
-- The group stage is where most points are made. You don't need to collect all six from a group — just three to qualify — but all six add up.
+- The group stage is where most points are made. You don't need to collect all six from a group — just five to qualify — but all six add up.
 - A balanced route through all four groups is likely to outscore a deep dive into just one or two.
 - The Final (99) is worth 50 points, but requires punching and qualifying through eight earlier controls. It rewards the runner who covers the most ground efficiently.
 - Going late is almost never worth it. At 10 points per started minute, just over a minute late costs you a quarter-final.
@@ -105,8 +105,8 @@ Plan your route to get back on time — a late finish can wipe out more than an 
 | Rule | Detail |
 |---|---|
 | Time limit | 60 minutes |
-| Group controls | 10 pts each (need ≥3 to qualify for that group's QF) |
-| Quarter-finals | 20 pts each (need both QFs in a half to unlock SF) |
+| Group controls | 10 pts each (need ≥5 to qualify for that group's QF) |
+| Quarter-finals | 20 pts each (SF 79 needs QFs 19+39; SF 89 needs 29+49) |
 | Semi-finals | 30 pts each (need both SFs to unlock Final) |
 | Final | 50 pts |
 | Time penalty | 1 pt per 2 seconds (30 pts/min) over 60 mins |

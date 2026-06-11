@@ -5,8 +5,8 @@ Mole Valley Orienteering Club - The Nower, 22 June 2026
 
 Fetches results from the MapRun API and applies World Cup scoring rules:
   - Group stage controls: 10 pts each (groups A/B/C/D, 6 controls each)
-  - Quarter-final controls: 20 pts each (unlocked if >=3 from parent group)
-  - Semi-final controls: 30 pts each (unlocked if both QFs in the half scored)
+  - Quarter-final controls: 20 pts each (unlocked if >=5 from parent group)
+  - Semi-final controls: 30 pts each (79 unlocked by QFs 19+39, 89 by 29+49)
   - Final control: 50 pts (unlocked if both SFs scored)
   - Time penalty: -1 pt per 2 seconds (or part thereof) over 60 minutes
 
@@ -69,9 +69,9 @@ KNOCKOUT_CONTROLS = {
     29: ("QF", "QF-B", ["B"]),        # unlocked if qualified from Group B
     39: ("QF", "QF-C", ["C"]),        # unlocked if qualified from Group C
     49: ("QF", "QF-D", ["D"]),        # unlocked if qualified from Group D
-    59: ("SF", "SF1",  [19, 29]),     # unlocked if QF-A and QF-B both scored
-    69: ("SF", "SF2",  [39, 49]),     # unlocked if QF-C and QF-D both scored
-    99: ("F",  "Final",[59, 69]),     # unlocked if SF1 and SF2 both scored
+    79: ("SF", "SF1",  [19, 39]),     # unlocked if QF-A and QF-C both scored
+    89: ("SF", "SF2",  [29, 49]),     # unlocked if QF-B and QF-D both scored
+    99: ("F",  "Final",[79, 89]),     # unlocked if SF1 and SF2 both scored
 }
 
 POINTS = {
@@ -81,7 +81,7 @@ POINTS = {
     "F":     50,
 }
 
-QUALIFY_THRESHOLD = 3   # controls needed from a group to unlock that group's QF
+QUALIFY_THRESHOLD = 5   # controls needed from a group to unlock that group's QF
 
 # ---------------------------------------------------------------------------
 # Scoring engine
@@ -153,7 +153,7 @@ def score_runner(punch_ids_str):
 
     # Build knockout detail in canonical bracket order, one entry per control
     knockout_detail = []
-    for ctrl in [19, 29, 39, 49, 59, 69, 99]:
+    for ctrl in [19, 29, 39, 49, 79, 89, 99]:
         if ctrl in ko_punched:
             round_type, label, _ = KNOCKOUT_CONTROLS[ctrl]
             if ctrl in scored_knockouts:
@@ -293,7 +293,7 @@ def export_json(processed, filename, event_name):
         sk = r["scored_knockouts"]
         if 99 in sk:
             furthest = "Final"
-        elif 59 in sk or 69 in sk:
+        elif 79 in sk or 89 in sk:
             furthest = "SF"
         elif sk & {19, 29, 39, 49}:
             furthest = "QF"
@@ -414,34 +414,34 @@ DEMO_RESULTS = [
                             "31","32","33","34","35","36",   # All Group C
                             "41","42","43","44","45","46",   # All Group D
                             "19","29","39","49",             # All QFs
-                            "59","69",                       # Both SFs
+                            "79","89",                       # Both SFs
                             "99"],                           # Final
         "punchTimeAfterStartSecs": list(range(100, 3400, 100)),
     },
-    {   # Good group stage, gets QF-A and QF-B, reaches SF1 but not SF2
+    {   # Scores QF 19 and 29, but they're in different halves — no SF
         "Id": 2, "Firstname": "Bob", "Surname": "Smith", "Gender": "M",
         "ClubName": "MVOC", "Classifier": "OK",
         "StartPunchTimeLocal": "18:35:00", "FinishPunchTimeLocal": "19:33:10",
         "TotalTimehhmmss": "0:58:10", "TotalTimeSecs": 3490,
         "punchControlIds": ["11","12","13","14","15","16",   # All Group A
                             "21","22","23","24","25","26",   # All Group B
-                            "31","32","33",                  # 3 from Group C (qualifies)
+                            "31","32","33",                  # 3 from Group C (doesn't qualify)
                             "41","42",                       # 2 from Group D (doesn't qualify)
                             "19","29","39","49",             # Punches all QFs
-                            "59","69",                       # Punches both SFs
+                            "79","89",                       # Punches both SFs
                             "99"],                           # Punches Final
         "punchTimeAfterStartSecs": list(range(80, 3490, 90)),
     },
-    {   # Greedy: skips groups, punches knockouts — most score zero
+    {   # Greedy: skips groups, punches knockouts — all score zero
         "Id": 3, "Firstname": "Charlie", "Surname": "Greedy", "Gender": "M",
         "ClubName": "MVOC", "Classifier": "OK",
         "StartPunchTimeLocal": "18:40:00", "FinishPunchTimeLocal": "19:38:20",
         "TotalTimehhmmss": "0:58:20", "TotalTimeSecs": 3500,
         "punchControlIds": ["11","12",                       # 2 from Group A (doesn't qualify)
-                            "21","22","23",                  # 3 from Group B (qualifies)
+                            "21","22","23",                  # 3 from Group B (doesn't qualify)
                             "31","32",                       # 2 from Group C (doesn't qualify)
-                            "41","42","43",                  # 3 from Group D (qualifies)
-                            "19","29","39","49","59","69","99"],
+                            "41","42","43",                  # 3 from Group D (doesn't qualify)
+                            "19","29","39","49","79","89","99"],
         "punchTimeAfterStartSecs": list(range(60, 3500, 80)),
     },
     {   # Steady completer — finishes 3 mins late
@@ -453,7 +453,7 @@ DEMO_RESULTS = [
                             "21","22","23","24",             # 4 from Group B
                             "31","32","33","34",             # 4 from Group C
                             "41","42","43","44",             # 4 from Group D
-                            "19","29","39","49"],            # All QFs
+                            "19","29","39","49"],            # All QFs (all locked: 4 < 5)
         "punchTimeAfterStartSecs": list(range(120, 3810, 120)),
     },
     {   # Beginner — just group stage controls

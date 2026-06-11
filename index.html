@@ -462,7 +462,7 @@
 
 <div class="scoring-key" id="scoringKey" style="display:none">
   <span class="key-item"><span class="badge badge-group">Group stage</span> 10 pts each</span>
-  <span class="key-item"><span class="badge badge-qf">QF</span> 20 pts (need &ge;3 from group)</span>
+  <span class="key-item"><span class="badge badge-qf">QF</span> 20 pts (need &ge;5 from group)</span>
   <span class="key-item"><span class="badge badge-sf">SF</span> 30 pts (need both QFs)</span>
   <span class="key-item"><span class="badge badge-final">Final</span> 50 pts (need both SFs)</span>
   <span class="key-item" style="color:#aaa">&minus;1 pt per 2 sec overtime</span>
@@ -521,7 +521,7 @@ var GROUP_META = {
   D: { name: 'The Dark Horses',      controls: {41:'Switzerland',42:'Norway',43:'Turkey',44:'Austria',45:'Denmark',46:'Scotland'} },
 };
 
-var KO_LABELS = {19:'QF-A',29:'QF-B',39:'QF-C',49:'QF-D',59:'SF1',69:'SF2',99:'Final'};
+var KO_LABELS = {19:'QF-A',29:'QF-B',39:'QF-C',49:'QF-D',79:'SF1',89:'SF2',99:'Final'};
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -539,7 +539,7 @@ function fmtTime(s) {
 function furthestRound(sk) {
   var s = new Set(sk || []);
   if (s.has(99))                         return 'Final';
-  if (s.has(59) || s.has(69))            return 'SF';
+  if (s.has(79) || s.has(89))            return 'SF';
   if (s.has(19)||s.has(29)||s.has(39)||s.has(49)) return 'QF';
   return 'Group';
 }
@@ -551,7 +551,7 @@ function journeyHTML(sk) {
   [19,29,39,49].forEach(function(c) {
     if (s.has(c)) out.push('<span class="badge badge-qf">'+KO_LABELS[c]+'</span>');
   });
-  [59,69].forEach(function(c) {
+  [79,89].forEach(function(c) {
     if (s.has(c)) out.push('<span class="badge badge-sf">'+KO_LABELS[c]+'</span>');
   });
   if (s.has(99)) out.push('<span class="badge badge-final">&#127942; Final</span>');

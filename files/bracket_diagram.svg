@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="760" viewBox="0 0 1080 760" font-family="Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5d4a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="760" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="540" y="34" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a5c1a">The Nower World Cup 2026 — Progression</text>
+  <text x="540" y="56" text-anchor="middle" font-size="13" fill="#555">Group stage controls score 10 pts each &#183; knockout controls only score once unlocked</text>
+
+  <!-- ──────── Group boxes ──────── -->
+  <!-- Group A -->
+  <g>
+    <rect x="30" y="80" width="270" height="100" rx="8" fill="#eef6ee" stroke="#1a5c1a" stroke-width="2"/>
+    <text x="165" y="103" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5c1a">Group A &#8212; The Americas Derby</text>
+    <text x="165" y="124" text-anchor="middle" font-size="12" fill="#333">11 Brazil &#183; 12 Argentina &#183; 13 Mexico</text>
+    <text x="165" y="141" text-anchor="middle" font-size="12" fill="#333">14 Uruguay &#183; 15 USA &#183; 16 Colombia</text>
+    <text x="165" y="164" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a6d00">10 pts each &#183; visit 5 of 6 to unlock QF-A</text>
+  </g>
+
+  <!-- Group C -->
+  <g>
+    <rect x="30" y="220" width="270" height="100" rx="8" fill="#eef6ee" stroke="#1a5c1a" stroke-width="2"/>
+    <text x="165" y="243" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5c1a">Group C &#8212; African Giants</text>
+    <text x="165" y="264" text-anchor="middle" font-size="12" fill="#333">31 Morocco &#183; 32 Senegal &#183; 33 Belgium</text>
+    <text x="165" y="281" text-anchor="middle" font-size="12" fill="#333">34 Japan &#183; 35 South Korea &#183; 36 Australia</text>
+    <text x="165" y="304" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a6d00">10 pts each &#183; visit 5 of 6 to unlock QF-C</text>
+  </g>
+
+  <!-- Group B -->
+  <g>
+    <rect x="30" y="400" width="270" height="100" rx="8" fill="#eef6ee" stroke="#1a5c1a" stroke-width="2"/>
+    <text x="165" y="423" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5c1a">Group B &#8212; Old World, New Blood</text>
+    <text x="165" y="444" text-anchor="middle" font-size="12" fill="#333">21 England &#183; 22 France &#183; 23 Spain</text>
+    <text x="165" y="461" text-anchor="middle" font-size="12" fill="#333">24 Portugal &#183; 25 Netherlands &#183; 26 Germany</text>
+    <text x="165" y="484" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a6d00">10 pts each &#183; visit 5 of 6 to unlock QF-B</text>
+  </g>
+
+  <!-- Group D -->
+  <g>
+    <rect x="30" y="540" width="270" height="100" rx="8" fill="#eef6ee" stroke="#1a5c1a" stroke-width="2"/>
+    <text x="165" y="563" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5c1a">Group D &#8212; The Dark Horses</text>
+    <text x="165" y="584" text-anchor="middle" font-size="12" fill="#333">41 Switzerland &#183; 42 Norway &#183; 43 Turkey</text>
+    <text x="165" y="601" text-anchor="middle" font-size="12" fill="#333">44 Austria &#183; 45 Denmark &#183; 46 Scotland</text>
+    <text x="165" y="624" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a6d00">10 pts each &#183; visit 5 of 6 to unlock QF-D</text>
+  </g>
+
+  <!-- ──────── Quarter-finals ──────── -->
+  <g>
+    <rect x="380" y="95" width="130" height="70" rx="8" fill="#faf0e6" stroke="#cd7f32" stroke-width="2"/>
+    <text x="445" y="120" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a4d12">QF-A</text>
+    <text x="445" y="138" text-anchor="middle" font-size="12" fill="#333">Control 19</text>
+    <text x="445" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a4d12">20 pts</text>
+  </g>
+  <g>
+    <rect x="380" y="235" width="130" height="70" rx="8" fill="#faf0e6" stroke="#cd7f32" stroke-width="2"/>
+    <text x="445" y="260" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a4d12">QF-C</text>
+    <text x="445" y="278" text-anchor="middle" font-size="12" fill="#333">Control 39</text>
+    <text x="445" y="295" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a4d12">20 pts</text>
+  </g>
+  <g>
+    <rect x="380" y="415" width="130" height="70" rx="8" fill="#faf0e6" stroke="#cd7f32" stroke-width="2"/>
+    <text x="445" y="440" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a4d12">QF-B</text>
+    <text x="445" y="458" text-anchor="middle" font-size="12" fill="#333">Control 29</text>
+    <text x="445" y="475" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a4d12">20 pts</text>
+  </g>
+  <g>
+    <rect x="380" y="555" width="130" height="70" rx="8" fill="#faf0e6" stroke="#cd7f32" stroke-width="2"/>
+    <text x="445" y="580" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a4d12">QF-D</text>
+    <text x="445" y="598" text-anchor="middle" font-size="12" fill="#333">Control 49</text>
+    <text x="445" y="615" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a4d12">20 pts</text>
+  </g>
+
+  <!-- ──────── Semi-finals ──────── -->
+  <g>
+    <rect x="610" y="160" width="150" height="80" rx="8" fill="#f2f4f7" stroke="#8a93a0" stroke-width="2"/>
+    <text x="685" y="185" text-anchor="middle" font-size="15" font-weight="bold" fill="#3f4854">SF1</text>
+    <text x="685" y="203" text-anchor="middle" font-size="12" fill="#333">Control 79</text>
+    <text x="685" y="220" text-anchor="middle" font-size="12" font-weight="bold" fill="#3f4854">30 pts</text>
+    <text x="685" y="234" text-anchor="middle" font-size="10" fill="#666">needs QF-A + QF-C scored</text>
+  </g>
+  <g>
+    <rect x="610" y="480" width="150" height="80" rx="8" fill="#f2f4f7" stroke="#8a93a0" stroke-width="2"/>
+    <text x="685" y="505" text-anchor="middle" font-size="15" font-weight="bold" fill="#3f4854">SF2</text>
+    <text x="685" y="523" text-anchor="middle" font-size="12" fill="#333">Control 89</text>
+    <text x="685" y="540" text-anchor="middle" font-size="12" font-weight="bold" fill="#3f4854">30 pts</text>
+    <text x="685" y="554" text-anchor="middle" font-size="10" fill="#666">needs QF-B + QF-D scored</text>
+  </g>
+
+  <!-- ──────── Final ──────── -->
+  <g>
+    <rect x="860" y="305" width="180" height="110" rx="10" fill="#fff8dc" stroke="#c9a227" stroke-width="3"/>
+    <text x="950" y="335" text-anchor="middle" font-size="19" font-weight="bold" fill="#8a6d00">THE FINAL</text>
+    <text x="950" y="358" text-anchor="middle" font-size="13" fill="#333">Control 99</text>
+    <text x="950" y="380" text-anchor="middle" font-size="14" font-weight="bold" fill="#8a6d00">50 pts</text>
+    <text x="950" y="399" text-anchor="middle" font-size="10" fill="#666">needs SF1 + SF2 scored</text>
+  </g>
+
+  <!-- ──────── Connectors ──────── -->
+  <!-- Groups to QFs (straight) -->
+  <line x1="300" y1="130" x2="376" y2="130" stroke="#4a5d4a" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="270" x2="376" y2="270" stroke="#4a5d4a" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="450" x2="376" y2="450" stroke="#4a5d4a" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="590" x2="376" y2="590" stroke="#4a5d4a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="340" y="120" text-anchor="middle" font-size="10" fill="#666">5 of 6</text>
+  <text x="340" y="260" text-anchor="middle" font-size="10" fill="#666">5 of 6</text>
+  <text x="340" y="440" text-anchor="middle" font-size="10" fill="#666">5 of 6</text>
+  <text x="340" y="580" text-anchor="middle" font-size="10" fill="#666">5 of 6</text>
+
+  <!-- QFs to SFs (elbows) -->
+  <path d="M510,130 H560 V185 H606" fill="none" stroke="#4a5d4a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M510,270 H560 V215 H606" fill="none" stroke="#4a5d4a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M510,450 H560 V505 H606" fill="none" stroke="#4a5d4a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M510,590 H560 V535 H606" fill="none" stroke="#4a5d4a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- SFs to Final (elbows) -->
+  <path d="M760,200 H810 V335 H856" fill="none" stroke="#4a5d4a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M760,520 H810 V385 H856" fill="none" stroke="#4a5d4a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ──────── Footer ──────── -->
+  <line x1="30" y1="672" x2="1050" y2="672" stroke="#ddd" stroke-width="1"/>
+  <text x="540" y="697" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">Visiting a locked knockout control scores ZERO &#8212; qualify first, then punch. Maximum score: 430 pts</text>
+  <text x="540" y="718" text-anchor="middle" font-size="12" fill="#666">60-minute time limit &#183; late penalty 1 pt per 2 seconds (30 pts per minute)</text>
+</svg>
