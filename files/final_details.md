@@ -31,3 +31,9 @@ Visiting a knockout control you haven't qualified for scores **zero** — the ap
 Maximum possible score: **430 points**.
 
 **Penalty if over 60 minutes:** 1 point per 2 seconds (30 points per minute).
+
+![Progression diagram — groups unlock quarter-finals, quarter-finals unlock semi-finals, semi-finals unlock the Final](bracket_diagram.png)
+
+*(Diagram source: `bracket_diagram.svg` — regenerate the PNG with
+`python3 -c "import cairosvg; cairosvg.svg2png(url='bracket_diagram.svg', write_to='bracket_diagram.png', scale=2)"`
+after any rule change.)*
