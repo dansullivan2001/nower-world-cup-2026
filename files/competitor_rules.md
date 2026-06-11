@@ -29,7 +29,7 @@ The controls are organised just like the real World Cup: **group stage**, **quar
 | Group C — African Giants | 31, 32, 33, 34, 35, 36 | 10 pts |
 | Group D — The Dark Horses | 41, 42, 43, 44, 45, 46 | 10 pts |
 | Quarter-finals | 19, 29, 39, 49 | 20 pts |
-| Semi-finals | 59, 69 | 30 pts |
+| Semi-finals | 79, 89 | 30 pts |
 | Final | 99 | 50 pts |
 
 **Maximum possible score: 430 points**
@@ -38,7 +38,7 @@ The controls are organised just like the real World Cup: **group stage**, **quar
 
 ## Progression Rules — How to Unlock the Knockout Rounds
 
-The knockout controls (19, 29, 39, 49, 59, 69, 99) only score points if you have **qualified** for them. Punching a locked control scores **zero** — the GPS records the visit, but the points don't count.
+The knockout controls (19, 29, 39, 49, 79, 89, 99) only score points if you have **qualified** for them. Punching a locked control scores **zero** — the GPS records the visit, but the points don't count.
 
 ### Quarter-finals
 
@@ -55,14 +55,14 @@ Each quarter-final is linked to its parent group:
 
 | Semi-final | Unlocked by |
 |---|---|
-| SF1 (control 59) | **Both** QF-A (19) **and** QF-B (29) scored |
-| SF2 (control 69) | **Both** QF-C (39) **and** QF-D (49) scored |
+| SF1 (control 79) | **Both** QF-A (19) **and** QF-C (39) scored |
+| SF2 (control 89) | **Both** QF-B (29) **and** QF-D (49) scored |
 
 ### Final
 
 | Control | Unlocked by |
 |---|---|
-| Final (control 99) | **Both** SF1 (59) **and** SF2 (69) scored |
+| Final (control 99) | **Both** SF1 (79) **and** SF2 (89) scored |
 
 > **Note:** "Scored" means the control was both punched **and** unlocked. Punching a locked quarter-final does not count towards a semi-final.
 
@@ -106,7 +106,7 @@ Plan your route to get back on time — a late finish can wipe out more than an 
 |---|---|
 | Time limit | 60 minutes |
 | Group controls | 10 pts each (need ≥5 to qualify for that group's QF) |
-| Quarter-finals | 20 pts each (need both QFs in a half to unlock SF) |
+| Quarter-finals | 20 pts each (SF 79 needs QFs 19+39; SF 89 needs 29+49) |
 | Semi-finals | 30 pts each (need both SFs to unlock Final) |
 | Final | 50 pts |
 | Time penalty | 1 pt per 2 seconds (30 pts/min) over 60 mins |

@@ -23,22 +23,22 @@
     <text x="165" y="164" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a6d00">10 pts each &#183; visit 5 of 6 to unlock QF-A</text>
   </g>
 
-  <!-- Group B -->
-  <g>
-    <rect x="30" y="220" width="270" height="100" rx="8" fill="#eef6ee" stroke="#1a5c1a" stroke-width="2"/>
-    <text x="165" y="243" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5c1a">Group B &#8212; Old World, New Blood</text>
-    <text x="165" y="264" text-anchor="middle" font-size="12" fill="#333">21 England &#183; 22 France &#183; 23 Spain</text>
-    <text x="165" y="281" text-anchor="middle" font-size="12" fill="#333">24 Portugal &#183; 25 Netherlands &#183; 26 Germany</text>
-    <text x="165" y="304" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a6d00">10 pts each &#183; visit 5 of 6 to unlock QF-B</text>
-  </g>
-
   <!-- Group C -->
   <g>
+    <rect x="30" y="220" width="270" height="100" rx="8" fill="#eef6ee" stroke="#1a5c1a" stroke-width="2"/>
+    <text x="165" y="243" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5c1a">Group C &#8212; African Giants</text>
+    <text x="165" y="264" text-anchor="middle" font-size="12" fill="#333">31 Morocco &#183; 32 Senegal &#183; 33 Belgium</text>
+    <text x="165" y="281" text-anchor="middle" font-size="12" fill="#333">34 Japan &#183; 35 South Korea &#183; 36 Australia</text>
+    <text x="165" y="304" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a6d00">10 pts each &#183; visit 5 of 6 to unlock QF-C</text>
+  </g>
+
+  <!-- Group B -->
+  <g>
     <rect x="30" y="400" width="270" height="100" rx="8" fill="#eef6ee" stroke="#1a5c1a" stroke-width="2"/>
-    <text x="165" y="423" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5c1a">Group C &#8212; African Giants</text>
-    <text x="165" y="444" text-anchor="middle" font-size="12" fill="#333">31 Morocco &#183; 32 Senegal &#183; 33 Belgium</text>
-    <text x="165" y="461" text-anchor="middle" font-size="12" fill="#333">34 Japan &#183; 35 South Korea &#183; 36 Australia</text>
-    <text x="165" y="484" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a6d00">10 pts each &#183; visit 5 of 6 to unlock QF-C</text>
+    <text x="165" y="423" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5c1a">Group B &#8212; Old World, New Blood</text>
+    <text x="165" y="444" text-anchor="middle" font-size="12" fill="#333">21 England &#183; 22 France &#183; 23 Spain</text>
+    <text x="165" y="461" text-anchor="middle" font-size="12" fill="#333">24 Portugal &#183; 25 Netherlands &#183; 26 Germany</text>
+    <text x="165" y="484" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a6d00">10 pts each &#183; visit 5 of 6 to unlock QF-B</text>
   </g>
 
   <!-- Group D -->
@@ -59,14 +59,14 @@
   </g>
   <g>
     <rect x="380" y="235" width="130" height="70" rx="8" fill="#faf0e6" stroke="#cd7f32" stroke-width="2"/>
-    <text x="445" y="260" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a4d12">QF-B</text>
-    <text x="445" y="278" text-anchor="middle" font-size="12" fill="#333">Control 29</text>
+    <text x="445" y="260" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a4d12">QF-C</text>
+    <text x="445" y="278" text-anchor="middle" font-size="12" fill="#333">Control 39</text>
     <text x="445" y="295" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a4d12">20 pts</text>
   </g>
   <g>
     <rect x="380" y="415" width="130" height="70" rx="8" fill="#faf0e6" stroke="#cd7f32" stroke-width="2"/>
-    <text x="445" y="440" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a4d12">QF-C</text>
-    <text x="445" y="458" text-anchor="middle" font-size="12" fill="#333">Control 39</text>
+    <text x="445" y="440" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a4d12">QF-B</text>
+    <text x="445" y="458" text-anchor="middle" font-size="12" fill="#333">Control 29</text>
     <text x="445" y="475" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a4d12">20 pts</text>
   </g>
   <g>
@@ -80,16 +80,16 @@
   <g>
     <rect x="610" y="160" width="150" height="80" rx="8" fill="#f2f4f7" stroke="#8a93a0" stroke-width="2"/>
     <text x="685" y="185" text-anchor="middle" font-size="15" font-weight="bold" fill="#3f4854">SF1</text>
-    <text x="685" y="203" text-anchor="middle" font-size="12" fill="#333">Control 59</text>
+    <text x="685" y="203" text-anchor="middle" font-size="12" fill="#333">Control 79</text>
     <text x="685" y="220" text-anchor="middle" font-size="12" font-weight="bold" fill="#3f4854">30 pts</text>
-    <text x="685" y="234" text-anchor="middle" font-size="10" fill="#666">needs QF-A + QF-B scored</text>
+    <text x="685" y="234" text-anchor="middle" font-size="10" fill="#666">needs QF-A + QF-C scored</text>
   </g>
   <g>
     <rect x="610" y="480" width="150" height="80" rx="8" fill="#f2f4f7" stroke="#8a93a0" stroke-width="2"/>
     <text x="685" y="505" text-anchor="middle" font-size="15" font-weight="bold" fill="#3f4854">SF2</text>
-    <text x="685" y="523" text-anchor="middle" font-size="12" fill="#333">Control 69</text>
+    <text x="685" y="523" text-anchor="middle" font-size="12" fill="#333">Control 89</text>
     <text x="685" y="540" text-anchor="middle" font-size="12" font-weight="bold" fill="#3f4854">30 pts</text>
-    <text x="685" y="554" text-anchor="middle" font-size="10" fill="#666">needs QF-C + QF-D scored</text>
+    <text x="685" y="554" text-anchor="middle" font-size="10" fill="#666">needs QF-B + QF-D scored</text>
   </g>
 
   <!-- ──────── Final ──────── -->

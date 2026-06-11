@@ -18,15 +18,15 @@ A 60-minute score orienteering event on The Nower (Dorking, Surrey) with a World
 | Group C — African Giants | 31–36 | 10 pts each |
 | Group D — The Dark Horses | 41–46 | 10 pts each |
 | Quarter-finals | 19, 29, 39, 49 | 20 pts each |
-| Semi-finals | 59, 69 | 30 pts each |
+| Semi-finals | 79, 89 | 30 pts each |
 | Final | 99 | 50 pts |
 
 **Maximum score: 430 points**
 
 **Unlock rules:**
 - QF unlocks with ≥5 controls from its parent group
-- SF1 (59) unlocks with both QF-A (19) and QF-B (29) scored
-- SF2 (69) unlocks with both QF-C (39) and QF-D (49) scored
+- SF1 (79) unlocks with both QF-A (19) and QF-C (39) scored
+- SF2 (89) unlocks with both QF-B (29) and QF-D (49) scored
 - Final (99) unlocks with both SF1 and SF2 scored
 
 **Time penalty:** 1 pt per 2 seconds (30 pts/min) over 60 minutes

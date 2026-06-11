@@ -20,10 +20,10 @@ The controls are organised like the World Cup: a group stage, then knockout roun
 
 **Group stage:** there are four groups of six controls — Group A (controls 11–16), Group B (21–26), Group C (31–36) and Group D (41–46). Each group control is worth **10 points**, and you can visit them in any order.
 
-**Knockout rounds:** the quarter-finals (19, 29, 39, 49) are worth **20 points**, the semi-finals (59, 69) **30 points**, and the Final (99) **50 points** — but knockout controls only score if you have *qualified* for them:
+**Knockout rounds:** the quarter-finals (19, 29, 39, 49) are worth **20 points**, the semi-finals (79, 89) **30 points**, and the Final (99) **50 points** — but knockout controls only score if you have *qualified* for them:
 
 - A quarter-final scores only if you have visited **at least 5 of the 6 controls** in its group (e.g. control 19 needs 5 from Group A).
-- A semi-final scores only if **both** of its quarter-finals scored (59 needs 19 and 29; 69 needs 39 and 49).
+- A semi-final scores only if **both** of its quarter-finals scored (79 needs 19 and 39; 89 needs 29 and 49).
 - The Final scores only if **both** semi-finals scored.
 
 Visiting a knockout control you haven't qualified for scores **zero** — the app will beep, but the points won't count. Qualification is checked automatically in the results processing after the event, so the score shown in the app on the day may differ from the official results. The order matters: qualify *before* you visit the knockout control (though you may return to it later if you qualify afterwards).

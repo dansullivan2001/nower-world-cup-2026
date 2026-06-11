@@ -19,10 +19,10 @@ The event is on **Monday 22 June 2026**, starts between **18:30 and 19:30**, 60-
 |---|---|---|---|
 | Group stage (4 groups × 6 controls) | 11–16, 21–26, 31–36, 41–46 | Group | 10 |
 | Quarter-finals | 19, 29, 39, 49 | QF | 20 |
-| Semi-finals | 59, 69 | SF | 30 |
+| Semi-finals | 79, 89 | SF | 30 |
 | Final | 99 | Final | 50 |
 
-The tens digit of group controls identifies the group (11–16 = Group A, 21–26 = Group B, etc.). The "9" suffix on knockout controls (19, 29, 39, 49, 59, 69, 99) is deliberate and thematic.
+The tens digit of group controls identifies the group (11–16 = Group A, 21–26 = Group B, etc.). The "9" suffix on knockout controls (19, 29, 39, 49, 79, 89, 99) is deliberate and thematic.
 
 **Maximum possible score:** 240 (groups) + 80 (QFs) + 60 (SFs) + 50 (Final) = **430 pts**
 
@@ -78,17 +78,17 @@ The tens digit of group controls identifies the group (11–16 = Group A, 21–2
 
 ```
 Group A ──► QF-A (19) ──┐
-Group B ──► QF-B (29) ──┴──► SF1 (59) ──┐
+Group C ──► QF-C (39) ──┴──► SF1 (79) ──┐
                                           ├──► FINAL (99)
-Group C ──► QF-C (39) ──┐                │
-Group D ──► QF-D (49) ──┴──► SF2 (69) ──┘
+Group B ──► QF-B (29) ──┐                │
+Group D ──► QF-D (49) ──┴──► SF2 (89) ──┘
 ```
 
 **Unlock rules:**
 - QF unlocks if runner has punched **≥5 controls from its parent group**
-- SF1 (59) unlocks if **both QF-A (19) and QF-B (29) scored** (not just punched — locked QFs don't count)
-- SF2 (69) unlocks if **both QF-C (39) and QF-D (49) scored**
-- Final (99) unlocks if **both SF1 (59) and SF2 (69) scored**
+- SF1 (79) unlocks if **both QF-A (19) and QF-C (39) scored** (not just punched — locked QFs don't count)
+- SF2 (89) unlocks if **both QF-B (29) and QF-D (49) scored**
+- Final (99) unlocks if **both SF1 (79) and SF2 (89) scored**
 
 Knockout controls that are punched but not unlocked score **zero**. This is enforced by the scoring script post-hoc; MapRun itself is unaware of the progression rules.
 
