@@ -424,6 +424,10 @@
          stays one line tall. Full breakdown is still available on tap-expand. */
       .journey-full    { display: none; }
       .journey-summary { display: flex; min-width: 60px; flex-wrap: nowrap; }
+      /* Tame the oversized monospace blocks in the expanded detail so they
+         sit in line with the surrounding text on small screens. */
+      .detail-formula  { font-size: 1em; }
+      .detail-controls { font-size: 1em; line-height: 1.6; }
     }
   </style>
 </head>
