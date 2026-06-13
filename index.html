@@ -229,6 +229,7 @@
 
     /* ── Journey badges ── */
     .journey { display: flex; flex-wrap: wrap; gap: 4px; }
+    .journey-summary { display: none; }  /* compact view shown on mobile only */
 
     .badge {
       display: inline-block;
@@ -419,7 +420,10 @@
     @media (max-width: 600px) {
       td, thead th { padding: 7px 6px; }
       table         { font-size: 0.82em; }
-      .journey      { min-width: 60px; }
+      /* Collapse the full badge stack to a single summary badge so every row
+         stays one line tall. Full breakdown is still available on tap-expand. */
+      .journey-full    { display: none; }
+      .journey-summary { display: flex; min-width: 60px; flex-wrap: nowrap; }
     }
   </style>
 </head>
@@ -556,6 +560,17 @@ function journeyHTML(sk) {
   });
   if (s.has(99)) out.push('<span class="badge badge-final">&#127942; Final</span>');
   return out.length ? out.join('') : '<span class="badge badge-group">Group stage</span>';
+}
+
+// Compact single badge showing the furthest round reached — used on mobile so
+// every row stays the same height regardless of how far a runner progressed.
+function journeySummaryHTML(sk) {
+  var round = furthestRound(sk);
+  var n = sk ? sk.length : 0;
+  if (round === 'Final') return '<span class="badge badge-final">&#127942; Final</span>';
+  if (round === 'SF')    return '<span class="badge badge-sf">Semi-finals' + (n > 1 ? ' &times;' + n : '') + '</span>';
+  if (round === 'QF')    return '<span class="badge badge-qf">Quarter-finals' + (n > 1 ? ' &times;' + n : '') + '</span>';
+  return '<span class="badge badge-group">Group stage</span>';
 }
 
 function posHTML(pos) {
@@ -737,7 +752,8 @@ function renderTable(rows) {
       '<td class="pts-cell r">' + r.knockout_pts + '</td>' +
       '<td class="pen-cell r">' + (r.penalty > 0 ? '&minus;' + r.penalty : '&mdash;') + '</td>' +
       '<td class="net-cell r">' + r.net_score + '</td>' +
-      '<td><div class="journey">' + journeyHTML(r.scored_knockouts) + '</div></td>' +
+      '<td><div class="journey journey-full">' + journeyHTML(r.scored_knockouts) + '</div>' +
+        '<div class="journey journey-summary">' + journeySummaryHTML(r.scored_knockouts) + '</div></td>' +
       '</tr>' +
       '<tr class="detail-row" id="dd' + i + '" style="display:' + (exp ? 'table-row' : 'none') + '">' +
         '<td colspan="9">' + buildDetail(r) + '</td>' +
