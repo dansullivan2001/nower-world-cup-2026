@@ -428,6 +428,17 @@
          sit in line with the surrounding text on small screens. */
       .detail-formula  { font-size: 1em; }
       .detail-controls { font-size: 1em; line-height: 1.6; }
+      /* The detail row lives inside the wide, horizontally-scrolling table, so
+         its content would otherwise stretch to the full table width and clip
+         off-screen. Pin it to the viewport so the whole panel stays readable. */
+      .detail-inner {
+        position: sticky;
+        left: 0;
+        width: 100vw;
+        max-width: 100vw;
+        padding: 12px 14px 14px;
+      }
+      .detail-groups { grid-template-columns: 1fr; }
     }
   </style>
 </head>
