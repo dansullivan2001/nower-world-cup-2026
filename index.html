@@ -20,6 +20,13 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* Stop iOS Safari from auto-inflating text when rotated to landscape,
+       which was ballooning the monospace detail blocks. */
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: var(--green-dark);
