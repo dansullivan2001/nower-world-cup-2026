@@ -46,7 +46,7 @@ GROUP_CONTROLS = {
     24: ("B", "Portugal"),
     25: ("B", "Netherlands"),
     26: ("B", "Germany"),
-    # Group C — African Giants
+    # Group C — Giant Slayers
     31: ("C", "Morocco"),
     32: ("C", "Senegal"),
     33: ("C", "Belgium"),

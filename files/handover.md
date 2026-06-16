@@ -52,7 +52,7 @@ The tens digit of group controls identifies the group (11–16 = Group A, 21–2
 | 25 | Netherlands |
 | 26 | Germany |
 
-### Group C — "African Giants"
+### Group C — "Giant Slayers"
 | No. | Country |
 |---|---|
 | 31 | Morocco |

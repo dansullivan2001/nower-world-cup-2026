@@ -15,7 +15,7 @@ A 60-minute score orienteering event on The Nower (Dorking, Surrey) with a World
 |---|---|---|
 | Group A — The Americas Derby | 11–16 | 10 pts each |
 | Group B — Old World, New Blood | 21–26 | 10 pts each |
-| Group C — African Giants | 31–36 | 10 pts each |
+| Group C — Giant Slayers | 31–36 | 10 pts each |
 | Group D — The Dark Horses | 41–46 | 10 pts each |
 | Quarter-finals | 19, 29, 39, 49 | 20 pts each |
 | Semi-finals | 79, 89 | 30 pts each |

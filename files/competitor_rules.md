@@ -26,7 +26,7 @@ The controls are organised just like the real World Cup: **group stage**, **quar
 |---|---|---|
 | Group A — The Americas Derby | 11, 12, 13, 14, 15, 16 | 10 pts |
 | Group B — Old World, New Blood | 21, 22, 23, 24, 25, 26 | 10 pts |
-| Group C — African Giants | 31, 32, 33, 34, 35, 36 | 10 pts |
+| Group C — Giant Slayers | 31, 32, 33, 34, 35, 36 | 10 pts |
 | Group D — The Dark Horses | 41, 42, 43, 44, 45, 46 | 10 pts |
 | Quarter-finals | 19, 29, 39, 49 | 20 pts |
 | Semi-finals | 79, 89 | 30 pts |
