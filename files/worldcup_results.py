@@ -194,6 +194,12 @@ def process_results(api_results):
             pass
 
         punch_ids = r.get("punchControlIds", [])
+        punch_times = r.get("punchTimeAfterStartSecs", [])
+        if len(punch_times) == len(punch_ids):
+            # MapRun appends repeat ("Extra") punches to the end of the array
+            # regardless of when they actually happened, which breaks the
+            # progression unlock order. Re-sort by true punch time first.
+            punch_ids = [c for _, c in sorted(zip(punch_times, punch_ids))]
         breakdown = score_runner(punch_ids)
 
         total_secs = r.get("TotalTimeSecs", 0)

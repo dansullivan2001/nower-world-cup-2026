@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-22T19:15:40Z",
+  "generated_utc": "2026-06-22T19:20:51Z",
   "event": "Nower World Cup Score ScoreV60 PXAS",
   "runner_count": 20,
   "status": "live",
@@ -14,11 +14,11 @@
       "total_time": "1:00:02",
       "total_secs": 3602,
       "group_pts": 240,
-      "knockout_pts": 110,
-      "raw_score": 350,
+      "knockout_pts": 190,
+      "raw_score": 430,
       "penalty": 1,
       "overtime_secs": 2,
-      "net_score": 349,
+      "net_score": 429,
       "qualified": {
         "A": true,
         "B": true,
@@ -30,7 +30,9 @@
         29,
         39,
         49,
-        89
+        79,
+        89,
+        99
       ],
       "group_detail": [
         "11 Brazil",
@@ -63,9 +65,9 @@
         "29 QF-B +20",
         "39 QF-C +20",
         "49 QF-D +20",
-        "79 SF1 LOCKED (0)",
+        "79 SF1 +30",
         "89 SF2 +30",
-        "99 Final LOCKED (0)"
+        "99 Final +50"
       ],
       "punch_log": [
         [
@@ -103,6 +105,10 @@
         [
           24,
           "scored"
+        ],
+        [
+          25,
+          "duplicate"
         ],
         [
           26,
@@ -149,6 +155,10 @@
           "scored"
         ],
         [
+          46,
+          "duplicate"
+        ],
+        [
           36,
           "scored"
         ],
@@ -163,6 +173,18 @@
         [
           49,
           "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          46,
+          "duplicate"
+        ],
+        [
+          26,
+          "duplicate"
         ],
         [
           29,
@@ -185,36 +207,12 @@
           "scored"
         ],
         [
-          79,
-          "locked"
-        ],
-        [
-          89,
-          "scored"
-        ],
-        [
-          25,
-          "duplicate"
-        ],
-        [
-          46,
-          "duplicate"
-        ],
-        [
-          39,
-          "scored"
-        ],
-        [
-          46,
-          "duplicate"
-        ],
-        [
-          26,
-          "duplicate"
-        ],
-        [
           14,
           "duplicate"
+        ],
+        [
+          79,
+          "scored"
         ],
         [
           15,
@@ -233,12 +231,16 @@
           "duplicate"
         ],
         [
+          89,
+          "scored"
+        ],
+        [
           46,
           "duplicate"
         ],
         [
           99,
-          "locked"
+          "scored"
         ],
         [
           12,
@@ -279,7 +281,7 @@
           42
         ]
       },
-      "furthest_round": "SF"
+      "furthest_round": "Final"
     },
     {
       "pos": 2,
@@ -291,11 +293,11 @@
       "total_time": "55:10",
       "total_secs": 3310,
       "group_pts": 210,
-      "knockout_pts": 110,
-      "raw_score": 320,
+      "knockout_pts": 190,
+      "raw_score": 400,
       "penalty": 0,
       "overtime_secs": 0,
-      "net_score": 320,
+      "net_score": 400,
       "qualified": {
         "A": true,
         "B": true,
@@ -307,7 +309,9 @@
         29,
         39,
         49,
-        79
+        79,
+        89,
+        99
       ],
       "group_detail": [
         "12 Argentina",
@@ -338,8 +342,8 @@
         "39 QF-C +20",
         "49 QF-D +20",
         "79 SF1 +30",
-        "89 SF2 LOCKED (0)",
-        "99 Final LOCKED (0)"
+        "89 SF2 +30",
+        "99 Final +50"
       ],
       "punch_log": [
         [
@@ -391,12 +395,28 @@
           "locked"
         ],
         [
+          15,
+          "duplicate"
+        ],
+        [
           29,
           "locked"
         ],
         [
           25,
           "scored"
+        ],
+        [
+          29,
+          "scored"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          16,
+          "duplicate"
         ],
         [
           42,
@@ -447,30 +467,6 @@
           "scored"
         ],
         [
-          49,
-          "scored"
-        ],
-        [
-          89,
-          "locked"
-        ],
-        [
-          15,
-          "duplicate"
-        ],
-        [
-          29,
-          "scored"
-        ],
-        [
-          19,
-          "scored"
-        ],
-        [
-          16,
-          "duplicate"
-        ],
-        [
           46,
           "duplicate"
         ],
@@ -479,8 +475,16 @@
           "scored"
         ],
         [
+          49,
+          "scored"
+        ],
+        [
           36,
           "duplicate"
+        ],
+        [
+          89,
+          "scored"
         ],
         [
           46,
@@ -496,7 +500,7 @@
         ],
         [
           99,
-          "locked"
+          "scored"
         ],
         [
           79,
@@ -538,264 +542,10 @@
           46
         ]
       },
-      "furthest_round": "SF"
+      "furthest_round": "Final"
     },
     {
       "pos": 3,
-      "name": "Justin Farhall",
-      "club": "Mole Valley Orienteering Club",
-      "classifier": "OK",
-      "start_local": "19:03:02",
-      "finish_local": "20:02:11",
-      "total_time": "59:09",
-      "total_secs": 3549,
-      "group_pts": 240,
-      "knockout_pts": 60,
-      "raw_score": 300,
-      "penalty": 0,
-      "overtime_secs": 0,
-      "net_score": 300,
-      "qualified": {
-        "A": true,
-        "B": true,
-        "C": true,
-        "D": true
-      },
-      "scored_knockouts": [
-        29,
-        39,
-        49
-      ],
-      "group_detail": [
-        "11 Brazil",
-        "12 Argentina",
-        "14 Uruguay",
-        "16 Colombia",
-        "13 Mexico",
-        "23 Spain",
-        "15 USA",
-        "22 France",
-        "21 England",
-        "24 Portugal",
-        "25 Netherlands",
-        "26 Germany",
-        "43 Turkey",
-        "44 Austria",
-        "46 Scotland",
-        "45 Denmark",
-        "42 Norway",
-        "41 Switzerland",
-        "36 Australia",
-        "35 South Korea",
-        "31 Morocco",
-        "32 Senegal",
-        "33 Belgium",
-        "34 Japan"
-      ],
-      "knockout_detail": [
-        "19 QF-A LOCKED (0)",
-        "29 QF-B +20",
-        "39 QF-C +20",
-        "49 QF-D +20",
-        "79 SF1 LOCKED (0)",
-        "89 SF2 LOCKED (0)"
-      ],
-      "punch_log": [
-        [
-          11,
-          "scored"
-        ],
-        [
-          12,
-          "scored"
-        ],
-        [
-          14,
-          "scored"
-        ],
-        [
-          19,
-          "locked"
-        ],
-        [
-          16,
-          "scored"
-        ],
-        [
-          13,
-          "scored"
-        ],
-        [
-          23,
-          "scored"
-        ],
-        [
-          15,
-          "scored"
-        ],
-        [
-          22,
-          "scored"
-        ],
-        [
-          21,
-          "scored"
-        ],
-        [
-          29,
-          "locked"
-        ],
-        [
-          24,
-          "scored"
-        ],
-        [
-          25,
-          "scored"
-        ],
-        [
-          26,
-          "scored"
-        ],
-        [
-          43,
-          "scored"
-        ],
-        [
-          44,
-          "scored"
-        ],
-        [
-          46,
-          "scored"
-        ],
-        [
-          45,
-          "scored"
-        ],
-        [
-          42,
-          "scored"
-        ],
-        [
-          41,
-          "scored"
-        ],
-        [
-          49,
-          "scored"
-        ],
-        [
-          36,
-          "scored"
-        ],
-        [
-          39,
-          "locked"
-        ],
-        [
-          35,
-          "scored"
-        ],
-        [
-          31,
-          "scored"
-        ],
-        [
-          32,
-          "scored"
-        ],
-        [
-          33,
-          "scored"
-        ],
-        [
-          34,
-          "scored"
-        ],
-        [
-          89,
-          "locked"
-        ],
-        [
-          79,
-          "locked"
-        ],
-        [
-          29,
-          "scored"
-        ],
-        [
-          25,
-          "duplicate"
-        ],
-        [
-          46,
-          "duplicate"
-        ],
-        [
-          39,
-          "scored"
-        ],
-        [
-          39,
-          "duplicate"
-        ],
-        [
-          46,
-          "duplicate"
-        ],
-        [
-          26,
-          "duplicate"
-        ],
-        [
-          16,
-          "duplicate"
-        ],
-        [
-          12,
-          "duplicate"
-        ]
-      ],
-      "group_hits": {
-        "A": [
-          11,
-          12,
-          14,
-          16,
-          13,
-          15
-        ],
-        "B": [
-          23,
-          22,
-          21,
-          24,
-          25,
-          26
-        ],
-        "C": [
-          36,
-          35,
-          31,
-          32,
-          33,
-          34
-        ],
-        "D": [
-          43,
-          44,
-          46,
-          45,
-          42,
-          41
-        ]
-      },
-      "furthest_round": "QF"
-    },
-    {
-      "pos": 4,
       "name": "Ben Toogood",
       "club": "MV",
       "classifier": "OK",
@@ -804,11 +554,11 @@
       "total_time": "1:00:05",
       "total_secs": 3605,
       "group_pts": 220,
-      "knockout_pts": 80,
-      "raw_score": 300,
+      "knockout_pts": 140,
+      "raw_score": 360,
       "penalty": 3,
       "overtime_secs": 5,
-      "net_score": 297,
+      "net_score": 357,
       "qualified": {
         "A": true,
         "B": true,
@@ -819,7 +569,9 @@
         19,
         29,
         39,
-        49
+        49,
+        79,
+        89
       ],
       "group_detail": [
         "11 Brazil",
@@ -850,8 +602,8 @@
         "29 QF-B +20",
         "39 QF-C +20",
         "49 QF-D +20",
-        "79 SF1 LOCKED (0)",
-        "89 SF2 LOCKED (0)",
+        "79 SF1 +30",
+        "89 SF2 +30",
         "99 Final LOCKED (0)"
       ],
       "punch_log": [
@@ -904,8 +656,16 @@
           "scored"
         ],
         [
+          29,
+          "scored"
+        ],
+        [
           19,
           "scored"
+        ],
+        [
+          16,
+          "duplicate"
         ],
         [
           26,
@@ -922,6 +682,10 @@
         [
           35,
           "scored"
+        ],
+        [
+          46,
+          "duplicate"
         ],
         [
           44,
@@ -952,6 +716,18 @@
           "scored"
         ],
         [
+          49,
+          "scored"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          34,
+          "duplicate"
+        ],
+        [
           33,
           "scored"
         ],
@@ -961,43 +737,11 @@
         ],
         [
           89,
-          "locked"
-        ],
-        [
-          99,
-          "locked"
-        ],
-        [
-          79,
-          "locked"
-        ],
-        [
-          29,
-          "scored"
-        ],
-        [
-          16,
-          "duplicate"
-        ],
-        [
-          46,
-          "duplicate"
-        ],
-        [
-          49,
           "scored"
         ],
         [
           39,
           "scored"
-        ],
-        [
-          34,
-          "duplicate"
-        ],
-        [
-          39,
-          "duplicate"
         ],
         [
           46,
@@ -1006,6 +750,14 @@
         [
           43,
           "duplicate"
+        ],
+        [
+          99,
+          "locked"
+        ],
+        [
+          79,
+          "scored"
         ],
         [
           12,
@@ -1044,10 +796,487 @@
           41
         ]
       },
-      "furthest_round": "QF"
+      "furthest_round": "SF"
+    },
+    {
+      "pos": 4,
+      "name": "Justin Farhall",
+      "club": "Mole Valley Orienteering Club",
+      "classifier": "OK",
+      "start_local": "19:03:02",
+      "finish_local": "20:02:11",
+      "total_time": "59:09",
+      "total_secs": 3549,
+      "group_pts": 240,
+      "knockout_pts": 90,
+      "raw_score": 330,
+      "penalty": 0,
+      "overtime_secs": 0,
+      "net_score": 330,
+      "qualified": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "scored_knockouts": [
+        29,
+        39,
+        49,
+        89
+      ],
+      "group_detail": [
+        "11 Brazil",
+        "12 Argentina",
+        "14 Uruguay",
+        "16 Colombia",
+        "13 Mexico",
+        "23 Spain",
+        "15 USA",
+        "22 France",
+        "21 England",
+        "24 Portugal",
+        "25 Netherlands",
+        "26 Germany",
+        "43 Turkey",
+        "44 Austria",
+        "46 Scotland",
+        "45 Denmark",
+        "42 Norway",
+        "41 Switzerland",
+        "36 Australia",
+        "35 South Korea",
+        "31 Morocco",
+        "32 Senegal",
+        "33 Belgium",
+        "34 Japan"
+      ],
+      "knockout_detail": [
+        "19 QF-A LOCKED (0)",
+        "29 QF-B +20",
+        "39 QF-C +20",
+        "49 QF-D +20",
+        "79 SF1 LOCKED (0)",
+        "89 SF2 +30"
+      ],
+      "punch_log": [
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          19,
+          "locked"
+        ],
+        [
+          16,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          15,
+          "scored"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          29,
+          "locked"
+        ],
+        [
+          24,
+          "scored"
+        ],
+        [
+          25,
+          "scored"
+        ],
+        [
+          26,
+          "scored"
+        ],
+        [
+          29,
+          "scored"
+        ],
+        [
+          25,
+          "duplicate"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          44,
+          "scored"
+        ],
+        [
+          46,
+          "scored"
+        ],
+        [
+          45,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          41,
+          "scored"
+        ],
+        [
+          49,
+          "scored"
+        ],
+        [
+          36,
+          "scored"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          35,
+          "scored"
+        ],
+        [
+          46,
+          "duplicate"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          34,
+          "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          89,
+          "scored"
+        ],
+        [
+          39,
+          "duplicate"
+        ],
+        [
+          46,
+          "duplicate"
+        ],
+        [
+          26,
+          "duplicate"
+        ],
+        [
+          16,
+          "duplicate"
+        ],
+        [
+          79,
+          "locked"
+        ],
+        [
+          12,
+          "duplicate"
+        ]
+      ],
+      "group_hits": {
+        "A": [
+          11,
+          12,
+          14,
+          16,
+          13,
+          15
+        ],
+        "B": [
+          23,
+          22,
+          21,
+          24,
+          25,
+          26
+        ],
+        "C": [
+          36,
+          35,
+          31,
+          32,
+          33,
+          34
+        ],
+        "D": [
+          43,
+          44,
+          46,
+          45,
+          42,
+          41
+        ]
+      },
+      "furthest_round": "SF"
     },
     {
       "pos": 5,
+      "name": "Mike Brock",
+      "club": "",
+      "classifier": "OK",
+      "start_local": "18:51:16",
+      "finish_local": "19:49:40",
+      "total_time": "58:23",
+      "total_secs": 3503,
+      "group_pts": 220,
+      "knockout_pts": 90,
+      "raw_score": 310,
+      "penalty": 0,
+      "overtime_secs": 0,
+      "net_score": 310,
+      "qualified": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "scored_knockouts": [
+        19,
+        29,
+        39,
+        79
+      ],
+      "group_detail": [
+        "11 Brazil",
+        "12 Argentina",
+        "14 Uruguay",
+        "22 France",
+        "21 England",
+        "15 USA",
+        "16 Colombia",
+        "13 Mexico",
+        "23 Spain",
+        "26 Germany",
+        "25 Netherlands",
+        "24 Portugal",
+        "43 Turkey",
+        "44 Austria",
+        "45 Denmark",
+        "36 Australia",
+        "34 Japan",
+        "33 Belgium",
+        "32 Senegal",
+        "35 South Korea",
+        "46 Scotland",
+        "42 Norway"
+      ],
+      "knockout_detail": [
+        "19 QF-A +20",
+        "29 QF-B +20",
+        "39 QF-C +20",
+        "79 SF1 +30",
+        "99 Final LOCKED (0)"
+      ],
+      "punch_log": [
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          15,
+          "scored"
+        ],
+        [
+          16,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          26,
+          "scored"
+        ],
+        [
+          25,
+          "scored"
+        ],
+        [
+          99,
+          "locked"
+        ],
+        [
+          24,
+          "scored"
+        ],
+        [
+          25,
+          "duplicate"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          44,
+          "scored"
+        ],
+        [
+          45,
+          "scored"
+        ],
+        [
+          36,
+          "scored"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          34,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          35,
+          "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          46,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          29,
+          "scored"
+        ],
+        [
+          16,
+          "duplicate"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          14,
+          "duplicate"
+        ],
+        [
+          79,
+          "scored"
+        ],
+        [
+          12,
+          "duplicate"
+        ]
+      ],
+      "group_hits": {
+        "A": [
+          11,
+          12,
+          14,
+          15,
+          16,
+          13
+        ],
+        "B": [
+          22,
+          21,
+          23,
+          26,
+          25,
+          24
+        ],
+        "C": [
+          36,
+          34,
+          33,
+          32,
+          35
+        ],
+        "D": [
+          43,
+          44,
+          45,
+          46,
+          42
+        ]
+      },
+      "furthest_round": "SF"
+    },
+    {
+      "pos": 6,
       "name": "Alex Croft",
       "club": "UBOC",
       "classifier": "OK",
@@ -1162,6 +1391,14 @@
           "scored"
         ],
         [
+          29,
+          "scored"
+        ],
+        [
+          25,
+          "duplicate"
+        ],
+        [
           43,
           "scored"
         ],
@@ -1206,6 +1443,14 @@
           "scored"
         ],
         [
+          39,
+          "locked"
+        ],
+        [
+          34,
+          "duplicate"
+        ],
+        [
           33,
           "scored"
         ],
@@ -1214,24 +1459,8 @@
           "scored"
         ],
         [
-          29,
-          "scored"
-        ],
-        [
-          25,
-          "duplicate"
-        ],
-        [
           39,
           "scored"
-        ],
-        [
-          34,
-          "duplicate"
-        ],
-        [
-          39,
-          "duplicate"
         ],
         [
           16,
@@ -1272,7 +1501,7 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 6,
+      "pos": 7,
       "name": "Ralph Scarbrough",
       "club": "",
       "classifier": "OK",
@@ -1413,22 +1642,6 @@
           "scored"
         ],
         [
-          99,
-          "locked"
-        ],
-        [
-          21,
-          "scored"
-        ],
-        [
-          16,
-          "scored"
-        ],
-        [
-          19,
-          "scored"
-        ],
-        [
           39,
           "scored"
         ],
@@ -1437,7 +1650,23 @@
           "duplicate"
         ],
         [
+          99,
+          "locked"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
           29,
+          "scored"
+        ],
+        [
+          16,
+          "scored"
+        ],
+        [
+          19,
           "scored"
         ]
       ],
@@ -1474,7 +1703,7 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 7,
+      "pos": 8,
       "name": "Peter Foulkes",
       "club": "",
       "classifier": "OK",
@@ -1617,16 +1846,16 @@
           "scored"
         ],
         [
-          79,
-          "scored"
-        ],
-        [
           12,
           "duplicate"
         ],
         [
           11,
           "duplicate"
+        ],
+        [
+          79,
+          "scored"
         ],
         [
           12,
@@ -1663,227 +1892,6 @@
         ]
       },
       "furthest_round": "SF"
-    },
-    {
-      "pos": 8,
-      "name": "Mike Brock",
-      "club": "",
-      "classifier": "OK",
-      "start_local": "18:51:16",
-      "finish_local": "19:49:40",
-      "total_time": "58:23",
-      "total_secs": 3503,
-      "group_pts": 220,
-      "knockout_pts": 60,
-      "raw_score": 280,
-      "penalty": 0,
-      "overtime_secs": 0,
-      "net_score": 280,
-      "qualified": {
-        "A": true,
-        "B": true,
-        "C": true,
-        "D": true
-      },
-      "scored_knockouts": [
-        19,
-        29,
-        39
-      ],
-      "group_detail": [
-        "11 Brazil",
-        "12 Argentina",
-        "14 Uruguay",
-        "22 France",
-        "21 England",
-        "15 USA",
-        "16 Colombia",
-        "13 Mexico",
-        "23 Spain",
-        "26 Germany",
-        "25 Netherlands",
-        "24 Portugal",
-        "43 Turkey",
-        "44 Austria",
-        "45 Denmark",
-        "36 Australia",
-        "34 Japan",
-        "33 Belgium",
-        "32 Senegal",
-        "35 South Korea",
-        "46 Scotland",
-        "42 Norway"
-      ],
-      "knockout_detail": [
-        "19 QF-A +20",
-        "29 QF-B +20",
-        "39 QF-C +20",
-        "79 SF1 LOCKED (0)",
-        "99 Final LOCKED (0)"
-      ],
-      "punch_log": [
-        [
-          11,
-          "scored"
-        ],
-        [
-          12,
-          "scored"
-        ],
-        [
-          14,
-          "scored"
-        ],
-        [
-          22,
-          "scored"
-        ],
-        [
-          21,
-          "scored"
-        ],
-        [
-          15,
-          "scored"
-        ],
-        [
-          16,
-          "scored"
-        ],
-        [
-          13,
-          "scored"
-        ],
-        [
-          23,
-          "scored"
-        ],
-        [
-          26,
-          "scored"
-        ],
-        [
-          25,
-          "scored"
-        ],
-        [
-          99,
-          "locked"
-        ],
-        [
-          24,
-          "scored"
-        ],
-        [
-          43,
-          "scored"
-        ],
-        [
-          44,
-          "scored"
-        ],
-        [
-          45,
-          "scored"
-        ],
-        [
-          36,
-          "scored"
-        ],
-        [
-          39,
-          "locked"
-        ],
-        [
-          34,
-          "scored"
-        ],
-        [
-          33,
-          "scored"
-        ],
-        [
-          32,
-          "scored"
-        ],
-        [
-          35,
-          "scored"
-        ],
-        [
-          46,
-          "scored"
-        ],
-        [
-          42,
-          "scored"
-        ],
-        [
-          29,
-          "scored"
-        ],
-        [
-          19,
-          "scored"
-        ],
-        [
-          79,
-          "locked"
-        ],
-        [
-          25,
-          "duplicate"
-        ],
-        [
-          39,
-          "scored"
-        ],
-        [
-          16,
-          "duplicate"
-        ],
-        [
-          14,
-          "duplicate"
-        ],
-        [
-          12,
-          "duplicate"
-        ]
-      ],
-      "group_hits": {
-        "A": [
-          11,
-          12,
-          14,
-          15,
-          16,
-          13
-        ],
-        "B": [
-          22,
-          21,
-          23,
-          26,
-          25,
-          24
-        ],
-        "C": [
-          36,
-          34,
-          33,
-          32,
-          35
-        ],
-        "D": [
-          43,
-          44,
-          45,
-          46,
-          42
-        ]
-      },
-      "furthest_round": "QF"
     },
     {
       "pos": 9,
@@ -2003,6 +2011,10 @@
           "scored"
         ],
         [
+          25,
+          "duplicate"
+        ],
+        [
           26,
           "scored"
         ],
@@ -2061,10 +2073,6 @@
         [
           42,
           "scored"
-        ],
-        [
-          25,
-          "duplicate"
         ],
         [
           49,
@@ -2128,6 +2136,394 @@
     },
     {
       "pos": 10,
+      "name": "Dan Horton",
+      "club": "IND",
+      "classifier": "OK",
+      "start_local": "18:51:54",
+      "finish_local": "19:50:08",
+      "total_time": "58:14",
+      "total_secs": 3494,
+      "group_pts": 180,
+      "knockout_pts": 90,
+      "raw_score": 270,
+      "penalty": 0,
+      "overtime_secs": 0,
+      "net_score": 270,
+      "qualified": {
+        "A": true,
+        "B": false,
+        "C": true,
+        "D": true
+      },
+      "scored_knockouts": [
+        19,
+        39,
+        49,
+        79
+      ],
+      "group_detail": [
+        "11 Brazil",
+        "12 Argentina",
+        "14 Uruguay",
+        "15 USA",
+        "13 Mexico",
+        "25 Netherlands",
+        "46 Scotland",
+        "35 South Korea",
+        "32 Senegal",
+        "33 Belgium",
+        "34 Japan",
+        "36 Australia",
+        "45 Denmark",
+        "44 Austria",
+        "42 Norway",
+        "41 Switzerland",
+        "26 Germany",
+        "24 Portugal"
+      ],
+      "knockout_detail": [
+        "19 QF-A +20",
+        "29 QF-B LOCKED (0)",
+        "39 QF-C +20",
+        "49 QF-D +20",
+        "79 SF1 +30",
+        "99 Final LOCKED (0)"
+      ],
+      "punch_log": [
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          15,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          29,
+          "locked"
+        ],
+        [
+          25,
+          "scored"
+        ],
+        [
+          46,
+          "scored"
+        ],
+        [
+          35,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          34,
+          "scored"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          36,
+          "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          36,
+          "duplicate"
+        ],
+        [
+          45,
+          "scored"
+        ],
+        [
+          44,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          41,
+          "scored"
+        ],
+        [
+          49,
+          "scored"
+        ],
+        [
+          26,
+          "scored"
+        ],
+        [
+          25,
+          "duplicate"
+        ],
+        [
+          24,
+          "scored"
+        ],
+        [
+          99,
+          "locked"
+        ],
+        [
+          11,
+          "duplicate"
+        ],
+        [
+          79,
+          "scored"
+        ],
+        [
+          12,
+          "duplicate"
+        ]
+      ],
+      "group_hits": {
+        "A": [
+          11,
+          12,
+          14,
+          15,
+          13
+        ],
+        "B": [
+          25,
+          26,
+          24
+        ],
+        "C": [
+          35,
+          32,
+          33,
+          34,
+          36
+        ],
+        "D": [
+          46,
+          45,
+          44,
+          42,
+          41
+        ]
+      },
+      "furthest_round": "SF"
+    },
+    {
+      "pos": 11,
+      "name": "Graham Denney",
+      "club": "",
+      "classifier": "OK",
+      "start_local": "19:01:32",
+      "finish_local": "19:57:58",
+      "total_time": "56:25",
+      "total_secs": 3385,
+      "group_pts": 180,
+      "knockout_pts": 70,
+      "raw_score": 250,
+      "penalty": 0,
+      "overtime_secs": 0,
+      "net_score": 250,
+      "qualified": {
+        "A": true,
+        "B": false,
+        "C": true,
+        "D": false
+      },
+      "scored_knockouts": [
+        19,
+        39,
+        79
+      ],
+      "group_detail": [
+        "11 Brazil",
+        "12 Argentina",
+        "14 Uruguay",
+        "15 USA",
+        "13 Mexico",
+        "16 Colombia",
+        "44 Austria",
+        "45 Denmark",
+        "36 Australia",
+        "34 Japan",
+        "33 Belgium",
+        "32 Senegal",
+        "35 South Korea",
+        "46 Scotland",
+        "43 Turkey",
+        "25 Netherlands",
+        "24 Portugal",
+        "22 France"
+      ],
+      "knockout_detail": [
+        "19 QF-A +20",
+        "29 QF-B LOCKED (0)",
+        "39 QF-C +20",
+        "49 QF-D LOCKED (0)",
+        "79 SF1 +30"
+      ],
+      "punch_log": [
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          15,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          16,
+          "scored"
+        ],
+        [
+          44,
+          "scored"
+        ],
+        [
+          45,
+          "scored"
+        ],
+        [
+          49,
+          "locked"
+        ],
+        [
+          36,
+          "scored"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          34,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          35,
+          "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          46,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          25,
+          "scored"
+        ],
+        [
+          24,
+          "scored"
+        ],
+        [
+          29,
+          "locked"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          79,
+          "scored"
+        ],
+        [
+          12,
+          "duplicate"
+        ]
+      ],
+      "group_hits": {
+        "A": [
+          11,
+          12,
+          14,
+          15,
+          13,
+          16
+        ],
+        "B": [
+          25,
+          24,
+          22
+        ],
+        "C": [
+          36,
+          34,
+          33,
+          32,
+          35
+        ],
+        "D": [
+          44,
+          45,
+          46,
+          43
+        ]
+      },
+      "furthest_round": "SF"
+    },
+    {
+      "pos": 12,
       "name": "Robert McCaffrey",
       "club": "MVOC",
       "classifier": "OK",
@@ -2240,6 +2636,10 @@
           "scored"
         ],
         [
+          25,
+          "duplicate"
+        ],
+        [
           43,
           "scored"
         ],
@@ -2292,10 +2692,6 @@
           "scored"
         ],
         [
-          25,
-          "duplicate"
-        ],
-        [
           99,
           "locked"
         ],
@@ -2342,66 +2738,62 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 11,
-      "name": "Dan Horton",
-      "club": "IND",
+      "pos": 13,
+      "name": "Hugh Scarbrough",
+      "club": "Mole Valley",
       "classifier": "OK",
-      "start_local": "18:51:54",
-      "finish_local": "19:50:08",
-      "total_time": "58:14",
-      "total_secs": 3494,
-      "group_pts": 180,
-      "knockout_pts": 60,
-      "raw_score": 240,
+      "start_local": "19:09:14",
+      "finish_local": "20:03:35",
+      "total_time": "54:20",
+      "total_secs": 3260,
+      "group_pts": 160,
+      "knockout_pts": 70,
+      "raw_score": 230,
       "penalty": 0,
       "overtime_secs": 0,
-      "net_score": 240,
+      "net_score": 230,
       "qualified": {
         "A": true,
         "B": false,
         "C": true,
-        "D": true
+        "D": false
       },
       "scored_knockouts": [
         19,
         39,
-        49
+        79
       ],
       "group_detail": [
-        "11 Brazil",
         "12 Argentina",
+        "11 Brazil",
         "14 Uruguay",
-        "15 USA",
+        "16 Colombia",
         "13 Mexico",
-        "25 Netherlands",
+        "26 Germany",
         "46 Scotland",
         "35 South Korea",
         "32 Senegal",
         "33 Belgium",
         "34 Japan",
         "36 Australia",
-        "45 Denmark",
-        "44 Austria",
-        "42 Norway",
-        "41 Switzerland",
-        "26 Germany",
-        "24 Portugal"
+        "43 Turkey",
+        "25 Netherlands",
+        "24 Portugal",
+        "15 USA"
       ],
       "knockout_detail": [
         "19 QF-A +20",
         "29 QF-B LOCKED (0)",
         "39 QF-C +20",
-        "49 QF-D +20",
-        "79 SF1 LOCKED (0)",
-        "99 Final LOCKED (0)"
+        "79 SF1 +30"
       ],
       "punch_log": [
         [
-          11,
+          12,
           "scored"
         ],
         [
-          12,
+          11,
           "scored"
         ],
         [
@@ -2409,7 +2801,11 @@
           "scored"
         ],
         [
-          15,
+          19,
+          "locked"
+        ],
+        [
+          16,
           "scored"
         ],
         [
@@ -2417,15 +2813,15 @@
           "scored"
         ],
         [
+          16,
+          "duplicate"
+        ],
+        [
           19,
           "scored"
         ],
         [
-          29,
-          "locked"
-        ],
-        [
-          25,
+          26,
           "scored"
         ],
         [
@@ -2449,35 +2845,19 @@
           "scored"
         ],
         [
-          39,
-          "locked"
-        ],
-        [
           36,
           "scored"
         ],
         [
-          45,
+          39,
           "scored"
         ],
         [
-          44,
+          43,
           "scored"
         ],
         [
-          42,
-          "scored"
-        ],
-        [
-          41,
-          "scored"
-        ],
-        [
-          49,
-          "scored"
-        ],
-        [
-          26,
+          25,
           "scored"
         ],
         [
@@ -2485,28 +2865,16 @@
           "scored"
         ],
         [
-          99,
+          29,
           "locked"
         ],
         [
-          79,
-          "locked"
-        ],
-        [
-          39,
+          15,
           "scored"
         ],
         [
-          36,
-          "duplicate"
-        ],
-        [
-          25,
-          "duplicate"
-        ],
-        [
-          11,
-          "duplicate"
+          79,
+          "scored"
         ],
         [
           12,
@@ -2515,15 +2883,16 @@
       ],
       "group_hits": {
         "A": [
-          11,
           12,
+          11,
           14,
-          15,
-          13
+          16,
+          13,
+          15
         ],
         "B": [
-          25,
           26,
+          25,
           24
         ],
         "C": [
@@ -2535,16 +2904,13 @@
         ],
         "D": [
           46,
-          45,
-          44,
-          42,
-          41
+          43
         ]
       },
-      "furthest_round": "QF"
+      "furthest_round": "SF"
     },
     {
-      "pos": 12,
+      "pos": 14,
       "name": "Adrian Croft",
       "club": "SLOW",
       "classifier": "OK",
@@ -2710,361 +3076,6 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 13,
-      "name": "Graham Denney",
-      "club": "",
-      "classifier": "OK",
-      "start_local": "19:01:32",
-      "finish_local": "19:57:58",
-      "total_time": "56:25",
-      "total_secs": 3385,
-      "group_pts": 180,
-      "knockout_pts": 40,
-      "raw_score": 220,
-      "penalty": 0,
-      "overtime_secs": 0,
-      "net_score": 220,
-      "qualified": {
-        "A": true,
-        "B": false,
-        "C": true,
-        "D": false
-      },
-      "scored_knockouts": [
-        19,
-        39
-      ],
-      "group_detail": [
-        "11 Brazil",
-        "12 Argentina",
-        "14 Uruguay",
-        "15 USA",
-        "13 Mexico",
-        "16 Colombia",
-        "44 Austria",
-        "45 Denmark",
-        "36 Australia",
-        "34 Japan",
-        "33 Belgium",
-        "32 Senegal",
-        "35 South Korea",
-        "46 Scotland",
-        "43 Turkey",
-        "25 Netherlands",
-        "24 Portugal",
-        "22 France"
-      ],
-      "knockout_detail": [
-        "19 QF-A +20",
-        "29 QF-B LOCKED (0)",
-        "39 QF-C +20",
-        "49 QF-D LOCKED (0)",
-        "79 SF1 LOCKED (0)"
-      ],
-      "punch_log": [
-        [
-          11,
-          "scored"
-        ],
-        [
-          12,
-          "scored"
-        ],
-        [
-          14,
-          "scored"
-        ],
-        [
-          15,
-          "scored"
-        ],
-        [
-          13,
-          "scored"
-        ],
-        [
-          19,
-          "scored"
-        ],
-        [
-          16,
-          "scored"
-        ],
-        [
-          44,
-          "scored"
-        ],
-        [
-          45,
-          "scored"
-        ],
-        [
-          49,
-          "locked"
-        ],
-        [
-          36,
-          "scored"
-        ],
-        [
-          39,
-          "locked"
-        ],
-        [
-          34,
-          "scored"
-        ],
-        [
-          33,
-          "scored"
-        ],
-        [
-          32,
-          "scored"
-        ],
-        [
-          35,
-          "scored"
-        ],
-        [
-          46,
-          "scored"
-        ],
-        [
-          43,
-          "scored"
-        ],
-        [
-          25,
-          "scored"
-        ],
-        [
-          24,
-          "scored"
-        ],
-        [
-          29,
-          "locked"
-        ],
-        [
-          22,
-          "scored"
-        ],
-        [
-          79,
-          "locked"
-        ],
-        [
-          39,
-          "scored"
-        ],
-        [
-          12,
-          "duplicate"
-        ]
-      ],
-      "group_hits": {
-        "A": [
-          11,
-          12,
-          14,
-          15,
-          13,
-          16
-        ],
-        "B": [
-          25,
-          24,
-          22
-        ],
-        "C": [
-          36,
-          34,
-          33,
-          32,
-          35
-        ],
-        "D": [
-          44,
-          45,
-          46,
-          43
-        ]
-      },
-      "furthest_round": "QF"
-    },
-    {
-      "pos": 14,
-      "name": "Hugh Scarbrough",
-      "club": "Mole Valley",
-      "classifier": "OK",
-      "start_local": "19:09:14",
-      "finish_local": "20:03:35",
-      "total_time": "54:20",
-      "total_secs": 3260,
-      "group_pts": 160,
-      "knockout_pts": 40,
-      "raw_score": 200,
-      "penalty": 0,
-      "overtime_secs": 0,
-      "net_score": 200,
-      "qualified": {
-        "A": true,
-        "B": false,
-        "C": true,
-        "D": false
-      },
-      "scored_knockouts": [
-        19,
-        39
-      ],
-      "group_detail": [
-        "12 Argentina",
-        "11 Brazil",
-        "14 Uruguay",
-        "16 Colombia",
-        "13 Mexico",
-        "26 Germany",
-        "46 Scotland",
-        "35 South Korea",
-        "32 Senegal",
-        "33 Belgium",
-        "34 Japan",
-        "36 Australia",
-        "43 Turkey",
-        "25 Netherlands",
-        "24 Portugal",
-        "15 USA"
-      ],
-      "knockout_detail": [
-        "19 QF-A +20",
-        "29 QF-B LOCKED (0)",
-        "39 QF-C +20",
-        "79 SF1 LOCKED (0)"
-      ],
-      "punch_log": [
-        [
-          12,
-          "scored"
-        ],
-        [
-          11,
-          "scored"
-        ],
-        [
-          14,
-          "scored"
-        ],
-        [
-          19,
-          "locked"
-        ],
-        [
-          16,
-          "scored"
-        ],
-        [
-          13,
-          "scored"
-        ],
-        [
-          26,
-          "scored"
-        ],
-        [
-          46,
-          "scored"
-        ],
-        [
-          35,
-          "scored"
-        ],
-        [
-          32,
-          "scored"
-        ],
-        [
-          33,
-          "scored"
-        ],
-        [
-          34,
-          "scored"
-        ],
-        [
-          36,
-          "scored"
-        ],
-        [
-          39,
-          "scored"
-        ],
-        [
-          43,
-          "scored"
-        ],
-        [
-          25,
-          "scored"
-        ],
-        [
-          24,
-          "scored"
-        ],
-        [
-          29,
-          "locked"
-        ],
-        [
-          15,
-          "scored"
-        ],
-        [
-          79,
-          "locked"
-        ],
-        [
-          16,
-          "duplicate"
-        ],
-        [
-          19,
-          "scored"
-        ],
-        [
-          12,
-          "duplicate"
-        ]
-      ],
-      "group_hits": {
-        "A": [
-          12,
-          11,
-          14,
-          16,
-          13,
-          15
-        ],
-        "B": [
-          26,
-          25,
-          24
-        ],
-        "C": [
-          35,
-          32,
-          33,
-          34,
-          36
-        ],
-        "D": [
-          46,
-          43
-        ]
-      },
-      "furthest_round": "QF"
-    },
-    {
       "pos": 15,
       "name": "Paul Byers",
       "club": "Mole valley",
@@ -3186,11 +3197,11 @@
           "locked"
         ],
         [
-          19,
+          29,
           "scored"
         ],
         [
-          29,
+          19,
           "scored"
         ]
       ],
@@ -3325,6 +3336,10 @@
           "scored"
         ],
         [
+          25,
+          "duplicate"
+        ],
+        [
           43,
           "scored"
         ],
@@ -3353,20 +3368,16 @@
           "scored"
         ],
         [
-          11,
-          "scored"
-        ],
-        [
-          25,
-          "duplicate"
-        ],
-        [
           29,
           "scored"
         ],
         [
           79,
           "locked"
+        ],
+        [
+          11,
+          "scored"
         ]
       ],
       "group_hits": {
@@ -3506,6 +3517,14 @@
           "scored"
         ],
         [
+          39,
+          "scored"
+        ],
+        [
+          36,
+          "duplicate"
+        ],
+        [
           45,
           "scored"
         ],
@@ -3520,14 +3539,6 @@
         [
           16,
           "scored"
-        ],
-        [
-          39,
-          "scored"
-        ],
-        [
-          36,
-          "duplicate"
         ]
       ],
       "group_hits": {
@@ -3636,16 +3647,16 @@
           "scored"
         ],
         [
+          12,
+          "duplicate"
+        ],
+        [
           19,
           "scored"
         ],
         [
           16,
           "scored"
-        ],
-        [
-          12,
-          "duplicate"
         ]
       ],
       "group_hits": {
@@ -3834,16 +3845,16 @@
           "scored"
         ],
         [
+          13,
+          "duplicate"
+        ],
+        [
           26,
           "scored"
         ],
         [
           42,
           "scored"
-        ],
-        [
-          13,
-          "duplicate"
         ],
         [
           16,
