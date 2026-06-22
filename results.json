@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-06-22T19:20:51Z",
+  "generated_utc": "2026-06-22T19:23:05Z",
   "event": "Nower World Cup Score ScoreV60 PXAS",
-  "runner_count": 20,
+  "runner_count": 23,
   "status": "live",
   "results": [
     {
@@ -2339,6 +2339,203 @@
     },
     {
       "pos": 11,
+      "name": "Steven Carle",
+      "club": "MVOC",
+      "classifier": "OK",
+      "start_local": "19:06:04",
+      "finish_local": "20:05:24",
+      "total_time": "59:20",
+      "total_secs": 3560,
+      "group_pts": 200,
+      "knockout_pts": 60,
+      "raw_score": 260,
+      "penalty": 0,
+      "overtime_secs": 0,
+      "net_score": 260,
+      "qualified": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "scored_knockouts": [
+        19,
+        29,
+        49
+      ],
+      "group_detail": [
+        "11 Brazil",
+        "12 Argentina",
+        "14 Uruguay",
+        "15 USA",
+        "22 France",
+        "21 England",
+        "24 Portugal",
+        "25 Netherlands",
+        "26 Germany",
+        "43 Turkey",
+        "46 Scotland",
+        "45 Denmark",
+        "44 Austria",
+        "42 Norway",
+        "36 Australia",
+        "34 Japan",
+        "33 Belgium",
+        "32 Senegal",
+        "31 Morocco",
+        "16 Colombia"
+      ],
+      "knockout_detail": [
+        "19 QF-A +20",
+        "29 QF-B +20",
+        "39 QF-C LOCKED (0)",
+        "49 QF-D +20",
+        "99 Final LOCKED (0)"
+      ],
+      "punch_log": [
+        [
+          11,
+          "scored"
+        ],
+        [
+          12,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          15,
+          "scored"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          29,
+          "locked"
+        ],
+        [
+          24,
+          "scored"
+        ],
+        [
+          25,
+          "scored"
+        ],
+        [
+          26,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          46,
+          "scored"
+        ],
+        [
+          45,
+          "scored"
+        ],
+        [
+          44,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          49,
+          "scored"
+        ],
+        [
+          36,
+          "scored"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          34,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          99,
+          "locked"
+        ],
+        [
+          15,
+          "duplicate"
+        ],
+        [
+          29,
+          "scored"
+        ],
+        [
+          16,
+          "scored"
+        ],
+        [
+          19,
+          "scored"
+        ]
+      ],
+      "group_hits": {
+        "A": [
+          11,
+          12,
+          14,
+          15,
+          16
+        ],
+        "B": [
+          22,
+          21,
+          24,
+          25,
+          26
+        ],
+        "C": [
+          36,
+          34,
+          33,
+          32,
+          31
+        ],
+        "D": [
+          43,
+          46,
+          45,
+          44,
+          42
+        ]
+      },
+      "furthest_round": "QF"
+    },
+    {
+      "pos": 12,
       "name": "Graham Denney",
       "club": "",
       "classifier": "OK",
@@ -2523,7 +2720,7 @@
       "furthest_round": "SF"
     },
     {
-      "pos": 12,
+      "pos": 13,
       "name": "Robert McCaffrey",
       "club": "MVOC",
       "classifier": "OK",
@@ -2738,7 +2935,7 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 13,
+      "pos": 14,
       "name": "Hugh Scarbrough",
       "club": "Mole Valley",
       "classifier": "OK",
@@ -2910,7 +3107,7 @@
       "furthest_round": "SF"
     },
     {
-      "pos": 14,
+      "pos": 15,
       "name": "Adrian Croft",
       "club": "SLOW",
       "classifier": "OK",
@@ -3076,7 +3273,180 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 15,
+      "pos": 16,
+      "name": "Jocelyn Darvill",
+      "club": "Mole Valley",
+      "classifier": "OK",
+      "start_local": "19:12:01",
+      "finish_local": "20:08:37",
+      "total_time": "56:36",
+      "total_secs": 3396,
+      "group_pts": 150,
+      "knockout_pts": 70,
+      "raw_score": 220,
+      "penalty": 0,
+      "overtime_secs": 0,
+      "net_score": 220,
+      "qualified": {
+        "A": true,
+        "B": false,
+        "C": true,
+        "D": false
+      },
+      "scored_knockouts": [
+        19,
+        39,
+        79
+      ],
+      "group_detail": [
+        "12 Argentina",
+        "14 Uruguay",
+        "15 USA",
+        "11 Brazil",
+        "16 Colombia",
+        "13 Mexico",
+        "25 Netherlands",
+        "43 Turkey",
+        "31 Morocco",
+        "32 Senegal",
+        "33 Belgium",
+        "34 Japan",
+        "36 Australia",
+        "35 South Korea",
+        "46 Scotland"
+      ],
+      "knockout_detail": [
+        "19 QF-A +20",
+        "39 QF-C +20",
+        "79 SF1 +30"
+      ],
+      "punch_log": [
+        [
+          12,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          15,
+          "scored"
+        ],
+        [
+          79,
+          "locked"
+        ],
+        [
+          11,
+          "scored"
+        ],
+        [
+          16,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          25,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          31,
+          "scored"
+        ],
+        [
+          32,
+          "scored"
+        ],
+        [
+          33,
+          "scored"
+        ],
+        [
+          34,
+          "scored"
+        ],
+        [
+          39,
+          "locked"
+        ],
+        [
+          36,
+          "scored"
+        ],
+        [
+          39,
+          "scored"
+        ],
+        [
+          35,
+          "scored"
+        ],
+        [
+          39,
+          "duplicate"
+        ],
+        [
+          46,
+          "scored"
+        ],
+        [
+          16,
+          "duplicate"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          14,
+          "duplicate"
+        ],
+        [
+          79,
+          "scored"
+        ],
+        [
+          12,
+          "duplicate"
+        ]
+      ],
+      "group_hits": {
+        "A": [
+          12,
+          14,
+          15,
+          11,
+          16,
+          13
+        ],
+        "B": [
+          25
+        ],
+        "C": [
+          31,
+          32,
+          33,
+          34,
+          36,
+          35
+        ],
+        "D": [
+          43,
+          46
+        ]
+      },
+      "furthest_round": "SF"
+    },
+    {
+      "pos": 17,
       "name": "Paul Byers",
       "club": "Mole valley",
       "classifier": "OK",
@@ -3232,7 +3602,148 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 16,
+      "pos": 18,
+      "name": "Philip Gristwood",
+      "club": "Mole Valley",
+      "classifier": "OK",
+      "start_local": "18:59:57",
+      "finish_local": "19:58:02",
+      "total_time": "58:04",
+      "total_secs": 3484,
+      "group_pts": 140,
+      "knockout_pts": 40,
+      "raw_score": 180,
+      "penalty": 0,
+      "overtime_secs": 0,
+      "net_score": 180,
+      "qualified": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": true
+      },
+      "scored_knockouts": [
+        19,
+        49
+      ],
+      "group_detail": [
+        "12 Argentina",
+        "14 Uruguay",
+        "15 USA",
+        "13 Mexico",
+        "23 Spain",
+        "16 Colombia",
+        "25 Netherlands",
+        "43 Turkey",
+        "44 Austria",
+        "46 Scotland",
+        "36 Australia",
+        "45 Denmark",
+        "41 Switzerland",
+        "26 Germany"
+      ],
+      "knockout_detail": [
+        "19 QF-A +20",
+        "49 QF-D +20"
+      ],
+      "punch_log": [
+        [
+          12,
+          "scored"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          15,
+          "scored"
+        ],
+        [
+          13,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          16,
+          "scored"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          25,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          44,
+          "scored"
+        ],
+        [
+          46,
+          "scored"
+        ],
+        [
+          36,
+          "scored"
+        ],
+        [
+          45,
+          "scored"
+        ],
+        [
+          41,
+          "scored"
+        ],
+        [
+          49,
+          "scored"
+        ],
+        [
+          26,
+          "scored"
+        ],
+        [
+          16,
+          "duplicate"
+        ]
+      ],
+      "group_hits": {
+        "A": [
+          12,
+          14,
+          15,
+          13,
+          16
+        ],
+        "B": [
+          23,
+          25,
+          26
+        ],
+        "C": [
+          36
+        ],
+        "D": [
+          43,
+          44,
+          46,
+          45,
+          41
+        ]
+      },
+      "furthest_round": "QF"
+    },
+    {
+      "pos": 19,
       "name": "Sam Kenham",
       "club": "",
       "classifier": "OK",
@@ -3409,7 +3920,7 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 17,
+      "pos": 20,
       "name": "Jennifer Sibley",
       "club": "MVOC",
       "classifier": "OK",
@@ -3571,7 +4082,7 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 18,
+      "pos": 21,
       "name": "Karen Cadman",
       "club": "SLOW",
       "classifier": "OK",
@@ -3679,7 +4190,7 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 19,
+      "pos": 22,
       "name": "Christine Glew",
       "club": "SLOW",
       "classifier": "OK",
@@ -3786,7 +4297,7 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 20,
+      "pos": 23,
       "name": "Paul Blagbrough",
       "club": "Mole Valley",
       "classifier": "OK",
