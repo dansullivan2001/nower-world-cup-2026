@@ -11,7 +11,7 @@ Fetches results from the MapRun API and applies World Cup scoring rules:
   - Time penalty: -1 pt per 2 seconds (or part thereof) over 60 minutes
 
 Usage:
-    python3 worldcup_results.py --event "Nower Jun26 MVOC PXAS ScoreQ60"
+    python3 worldcup_results.py --event "Nower World Cup Score ScoreV60 PXAS"
     python3 worldcup_results.py --demo   (runs with synthetic test data)
 """
 

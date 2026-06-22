@@ -65,13 +65,13 @@ On event day (22 June 2026) the GitHub Action runs every 5 minutes from 17:00–
 python3 files/worldcup_results.py --demo --detail
 
 # Fetch live results from MapRun
-python3 files/worldcup_results.py --event "Nower Jun26 MVOC PXAS ScoreQ60"
+python3 files/worldcup_results.py --event "Nower World Cup Score ScoreV60 PXAS"
 
 # Export to JSON (for the results page)
-python3 files/worldcup_results.py --event "Nower Jun26 MVOC PXAS ScoreQ60" --json results.json
+python3 files/worldcup_results.py --event "Nower World Cup Score ScoreV60 PXAS" --json results.json
 
 # Export to CSV
-python3 files/worldcup_results.py --event "Nower Jun26 MVOC PXAS ScoreQ60" --csv results.csv
+python3 files/worldcup_results.py --event "Nower World Cup Score ScoreV60 PXAS" --csv results.csv
 ```
 
 No external dependencies — stdlib only (`urllib`, `json`, `csv`, `math`). Requires Python 3.6+.

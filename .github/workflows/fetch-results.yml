@@ -20,7 +20,7 @@ jobs:
       - name: Fetch and score results
         run: |
           if python3 files/worldcup_results.py \
-              --event "Nower Jun26 MVOC PXAS ScoreQ60" \
+              --event "Nower World Cup Score ScoreV60 PXAS" \
               --json results.json; then
             echo "Results updated successfully"
           else

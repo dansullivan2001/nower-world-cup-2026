@@ -124,13 +124,13 @@ https://p.fne.com.au:8886/resultsGetPublicForEventv2?eventName=<Full event name>
 python3 worldcup_results.py --demo --detail
 
 # Live results from MapRun
-python3 worldcup_results.py --event "Nower Jun26 MVOC PXAS ScoreQ60"
+python3 worldcup_results.py --event "Nower World Cup Score ScoreV60 PXAS"
 
 # With CSV export
-python3 worldcup_results.py --event "Nower Jun26 MVOC PXAS ScoreQ60" --csv results.csv
+python3 worldcup_results.py --event "Nower World Cup Score ScoreV60 PXAS" --csv results.csv
 
 # With detailed per-runner breakdown
-python3 worldcup_results.py --event "Nower Jun26 MVOC PXAS ScoreQ60" --detail
+python3 worldcup_results.py --event "Nower World Cup Score ScoreV60 PXAS" --detail
 ```
 
 **Note:** The exact event name string must match the MapRun event file name character for character.
@@ -151,7 +151,7 @@ The following have been discussed but not yet built:
 2. **Event briefing text** — Pre-race "commentary" framing the event as a World Cup broadcast. Not yet written.
 
 3. **MapRun event setup** — The event name for MapRun needs to be agreed. Convention is something like:
-   `Nower Jun26 MVOC PXAS ScoreQ60`
+   `Nower World Cup Score ScoreV60 PXAS`
    Note: MapRun's native ScoreQ scoring will calculate its own results, but these are ignored — the Python script does the actual World Cup scoring post-hoc.
 
 4. **England fixture check** — 22 June falls during the World Cup group stage. Worth checking whether England are playing that evening, as it may affect turnout.
