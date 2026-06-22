@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-06-22T19:02:14Z",
+  "generated_utc": "2026-06-22T19:03:39Z",
   "event": "Nower World Cup Score ScoreV60 PXAS",
-  "runner_count": 11,
+  "runner_count": 12,
   "status": "live",
   "results": [
     {
@@ -1546,6 +1546,162 @@
     },
     {
       "pos": 8,
+      "name": "Paul Byers",
+      "club": "Mole valley",
+      "classifier": "OK",
+      "start_local": "19:04:15",
+      "finish_local": "19:57:32",
+      "total_time": "53:16",
+      "total_secs": 3196,
+      "group_pts": 150,
+      "knockout_pts": 40,
+      "raw_score": 190,
+      "penalty": 0,
+      "overtime_secs": 0,
+      "net_score": 190,
+      "qualified": {
+        "A": true,
+        "B": true,
+        "C": false,
+        "D": false
+      },
+      "scored_knockouts": [
+        19,
+        29
+      ],
+      "group_detail": [
+        "12 Argentina",
+        "11 Brazil",
+        "14 Uruguay",
+        "15 USA",
+        "16 Colombia",
+        "23 Spain",
+        "22 France",
+        "21 England",
+        "24 Portugal",
+        "25 Netherlands",
+        "26 Germany",
+        "43 Turkey",
+        "46 Scotland",
+        "45 Denmark",
+        "42 Norway"
+      ],
+      "knockout_detail": [
+        "19 QF-A +20",
+        "29 QF-B +20",
+        "49 QF-D LOCKED (0)",
+        "79 SF1 LOCKED (0)"
+      ],
+      "punch_log": [
+        [
+          12,
+          "scored"
+        ],
+        [
+          11,
+          "scored"
+        ],
+        [
+          79,
+          "locked"
+        ],
+        [
+          14,
+          "scored"
+        ],
+        [
+          15,
+          "scored"
+        ],
+        [
+          16,
+          "scored"
+        ],
+        [
+          23,
+          "scored"
+        ],
+        [
+          29,
+          "locked"
+        ],
+        [
+          22,
+          "scored"
+        ],
+        [
+          21,
+          "scored"
+        ],
+        [
+          24,
+          "scored"
+        ],
+        [
+          25,
+          "scored"
+        ],
+        [
+          26,
+          "scored"
+        ],
+        [
+          43,
+          "scored"
+        ],
+        [
+          46,
+          "scored"
+        ],
+        [
+          45,
+          "scored"
+        ],
+        [
+          42,
+          "scored"
+        ],
+        [
+          49,
+          "locked"
+        ],
+        [
+          19,
+          "scored"
+        ],
+        [
+          29,
+          "scored"
+        ]
+      ],
+      "group_hits": {
+        "A": [
+          12,
+          11,
+          14,
+          15,
+          16
+        ],
+        "B": [
+          23,
+          22,
+          21,
+          24,
+          25,
+          26
+        ],
+        "C": [],
+        "D": [
+          43,
+          46,
+          45,
+          42
+        ]
+      },
+      "furthest_round": "QF"
+    },
+    {
+      "pos": 9,
       "name": "Sam Kenham",
       "club": "",
       "classifier": "OK",
@@ -1722,7 +1878,7 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 9,
+      "pos": 10,
       "name": "Jennifer Sibley",
       "club": "MVOC",
       "classifier": "OK",
@@ -1884,7 +2040,7 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 10,
+      "pos": 11,
       "name": "Karen Cadman",
       "club": "SLOW",
       "classifier": "OK",
@@ -1992,7 +2148,7 @@
       "furthest_round": "QF"
     },
     {
-      "pos": 11,
+      "pos": 12,
       "name": "Christine Glew",
       "club": "SLOW",
       "classifier": "OK",
